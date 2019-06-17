@@ -16,7 +16,7 @@ export class Signup extends Component {
           <div className="title" >
 
             <label  >
-              Create A Trello Account
+              Create a Trello Account
 
            </label>
           </div>
