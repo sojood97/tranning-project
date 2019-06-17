@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-
+import {Signup} from "./components/pages/signup";
 import {
   BrowserRouter as Router,
   Route,
@@ -21,10 +21,14 @@ render((
   <Router>
     <App>
       <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route path="/helloworld" component={HelloWorld}/>
+        <Route exact path="/" component={Signup}/>
+       /* <Route path="/helloworld" component={HelloWorld}/>
         <Route component={NotFound}/>
+
+        */
       </Switch>
     </App>
   </Router>
 ), document.getElementById('app'));
+
+
