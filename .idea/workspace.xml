@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/components/pages/signup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="56" column="116" selection-start-line="56" selection-start-column="116" selection-end-line="56" selection-end-column="116" />
+            <state relative-caret-position="491">
+              <caret line="59" column="115" selection-start-line="59" selection-start-column="115" selection-end-line="59" selection-end-column="115" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -29,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/styles/signup.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="170" column="20" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="20" />
+            <state relative-caret-position="349">
+              <caret line="178" column="17" selection-start-line="178" selection-start-column="17" selection-end-line="178" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -64,15 +64,15 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/client/app/index.js" />
         <option value="$PROJECT_DIR$/client/app/components/HelloWorld/HelloWorld.js" />
-        <option value="$PROJECT_DIR$/client/app/components/App/App.js" />
         <option value="$PROJECT_DIR$/client/app/components/signup/signup.css" />
         <option value="$PROJECT_DIR$/client/app/components/Footer/Footer.js" />
         <option value="$PROJECT_DIR$/client/app/components/Header/Header.js" />
         <option value="$PROJECT_DIR$/client/app/components/signup/signups.sass" />
         <option value="$PROJECT_DIR$/client/app/components/signup/signup.js" />
         <option value="$PROJECT_DIR$/client/app/components/signup/signup.scss" />
-        <option value="$PROJECT_DIR$/client/app/components/pages/signup.js" />
+        <option value="$PROJECT_DIR$/client/app/components/App/App.js" />
         <option value="$PROJECT_DIR$/client/app/styles/signup.scss" />
+        <option value="$PROJECT_DIR$/client/app/components/pages/signup.js" />
       </list>
     </option>
   </component>
@@ -252,11 +252,12 @@
       <workItem from="1560664688002" duration="23796000" />
       <workItem from="1560748631491" duration="8308000" />
       <workItem from="1560770572971" duration="4459000" />
+      <workItem from="1560777334075" duration="7621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37362000" />
+    <option name="totallyTimeSpent" value="44983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -315,16 +316,6 @@
     <entry file="file://$PROJECT_DIR$/client/app/components/signup" />
     <entry file="file://$PROJECT_DIR$/client/app/components/signup/signup.css" />
     <entry file="file://$PROJECT_DIR$/client/app/components/signup/signups.sass" />
-    <entry file="file://$PROJECT_DIR$/client/app/components/App/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -391,20 +382,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/components/pages/signup.js">
+    <entry file="file://$PROJECT_DIR$/client/app/components/App/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="56" column="116" selection-start-line="56" selection-start-column="116" selection-end-line="56" selection-end-column="116" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="21">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/styles/signup.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="170" column="20" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="20" />
+        <state relative-caret-position="349">
+          <caret line="178" column="17" selection-start-line="178" selection-start-column="17" selection-end-line="178" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/components/pages/signup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="59" column="115" selection-start-line="59" selection-start-column="115" selection-end-line="59" selection-end-column="115" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

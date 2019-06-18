@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import FormGroup from '@material-ui/core/FormGroup';
-import { TextField } from "@material-ui/core";
 import '../../styles/signup.scss';
-import {google} from '../images/google.png';
-import {icon} from '../images/google.png';
 export class Signup extends Component {
 
   render() {
@@ -54,8 +50,20 @@ export class Signup extends Component {
           <div className="google">
 
 
-            <button className="google_button"> <img className="image" src={require('../images/google.png')}width="25px" height="25px"/>Sign up with Google</button>
 
+
+
+            <button className="google_button"><img className="image" src={require('../images/google.png')}width="30px" height="20px" />Sign up with Google</button>
+
+      </div>
+
+
+
+          <div className="privacy">
+            <label>
+              <p>By creating an account, you agree to our<a href="#" > Terms of Service</a><p>and <a href="#"  >   Privacy Policy</a></p>.</p>
+              
+            </label>
           </div>
         </form>
       </div>

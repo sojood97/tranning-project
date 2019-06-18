@@ -1,10 +1,10 @@
 .title{
-  padding-top: 80px;
+  padding-top: 60px;
   padding-left: 530px;
-  font-size: 45px;
-  font-weight: bold;
+  font-size: 40px;
+  font-weight: bolder;
   length: 50px;
-  font-family: Candara;
+  font-family: sans-serif;
 }
 
 .name{
@@ -14,9 +14,10 @@
   font-family: Calibri;
   flex-direction: column;
   width: 50px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 50.8px;
-  text-align: center; 
+  text-align: center;
+
 }
 
 .text_name{
@@ -76,6 +77,7 @@
   width: 50px;
   line-height: 50.8px;
   border-color: whitesmoke;
+  font-weight: 400;
 }
 
 .password {
@@ -87,6 +89,7 @@
   width: 50px;
   line-height: 50.8px;
   border-color: whitesmoke;
+  font-weight: 400;
 }
 
 .new{
@@ -97,27 +100,29 @@
   font-size: 25px;
 
   font-family: Calibri;
-  font-weight: 900;
+  font-weight: bold;
 }
 
 .google{
   padding-left: 530px;
   padding-top: 20px;
-  font-size: 20px;
-  text-align: left;
+  font-size: 20px ;
+  text-align: center;
   text-decoration-color: silver;
-  font-weight: 400 ;
+  font-weight: 500;
   padding-right: 70px;
   width: 200px;
-  font-family: "Harlow Solid Italic";
+  font-family: Calibri ;
 }
 
 .link{
   padding-left: 530px;
+  font-size: 20px;
 }
 
 .google_button{
   background-color: white;
+  color: rgba(88, 86, 85, 0.81);
   width: 450px;
   height: 47px;
   padding-right: 70px;
@@ -127,15 +132,21 @@
   border-right-width: 0.2ch;
   border-bottom-color: rgba(252, 255, 252, 0.25);
   border-right-color: rgba(252, 255, 252, 0.25);
+  border-radius: 3px ;
+ // padding-bottom: 60px;
+  padding-top: 1px;
+  padding-left: 90px;
+
 }
 
 .new_button{
- color: #a3a6a3;
+ color: rgba(130, 127, 125, 0.81);
  width: 450px;
  height: 47px;
  border-color: white;
  border: 0;
- font-weight: bolder;
+ font-weight: bold;
+  border-radius: 3px ;
 }
 
 a {
@@ -159,6 +170,17 @@ a {
 }
 
 .image{
-  padding-right: 30px;
-  padding-top: 10px;
+padding-right: 20px;
+}
+
+.privacy{
+  font-size: 17px;
+  font-weight: 100;
+  width: 450px;
+  height: 47px;
+  padding-left: 533px ;
+  padding-bottom: 150px;
+  padding-top: 30px;
+  color: rgba(132, 132, 132, 0.87);
+  font-family: Calibri;
 }
