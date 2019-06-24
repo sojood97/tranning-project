@@ -1,7 +1,7 @@
 const nodemon = require('nodemon');
 const path = require('path');
 
-console.log("config");
+//console.log("config");
 
 
 nodemon({

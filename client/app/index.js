@@ -1,30 +1,22 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Switch
-} from 'react-router-dom'
-
-import App from './components/App/App';
-import NotFound from './components/App/NotFound';
-
-import Home from './components/Home/Home';
-
-import HelloWorld from './components/HelloWorld/HelloWorld';
+import Login from '../app/pages/Login/Login';
+import Reset_Password from '../app/pages/Login/reset_password/Reset_Password';
 
 import './styles/styles.scss';
 
 render((
-  <Router>
-    <App>
-      <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route path="/helloworld" component={HelloWorld}/>
-        <Route component={NotFound}/>
-      </Switch>
-    </App>
-  </Router>
+    <BrowserRouter>
+        {/* <Switch>
+            <PublicRoute restricted={false} component={Login} path="/" exact />
+            <PublicRoute restricted={false} component={Reset_Password} path="/reset_password" exact />
+            <PrivateRoute component={Dashboard} path="/dashboard" exact />
+       </Switch>*/}
+        <div>
+            <Route path={"/login"} component={Login} />
+            <Route path={"/reset_password"} component={Reset_Password} />
+        </div>
+    </BrowserRouter>
 ), document.getElementById('app'));
