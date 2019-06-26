@@ -6,7 +6,7 @@ const User = require("../../../models/User");
 
 const passport = require("passport");
 
-router.post("/", function(req, res) {
+router.post("/signup", function(req, res) {
     var body = req.body,
         name = body.name,
         email = body.email,
@@ -34,7 +34,7 @@ router.post("/", function(req, res) {
                             res.status(500).send("db error");
                         } else {
                             // res.json({ user });
-                            // res.json("success  register");
+                           res.json("success  register");
                         }
                     });
                 }

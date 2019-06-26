@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../../pages/signup/signup.scss";
-
+import { NavLink } from "react-router-dom";
 export class Signup extends Component {
     constructor(props) {
         super(props);
@@ -8,7 +8,8 @@ export class Signup extends Component {
             name: "",
             email: "",
             password: "",
-            data: ""
+            dataForSignup: "",
+            flag:false
         };
 
         this.onSubmit = this.onSubmit.bind(this);
@@ -22,7 +23,7 @@ export class Signup extends Component {
             email: this.state.email,
             password: this.state.password
         };
-        return fetch("/api/users", {
+        return fetch("/api/users/signup", {
             method: "post",
             body: JSON.stringify(user),
             headers: new Headers({
@@ -35,7 +36,7 @@ export class Signup extends Component {
                 return response.json();
             })
             .then(data => {
-                this.setState({ data: JSON.stringify(data) });
+                this.setState({ dataForSignup: data , flag:true });
 
                 // data is the parsed version of the JSON returned from the above endpoint.
                 console.log(data);
@@ -51,9 +52,9 @@ export class Signup extends Component {
                     }}
                 >
                     <div>
-                        {this.state.data ? (
+                        {this.state.flag ? (
                             <div className="email_not_found">
-                                {this.state.data}
+                                {this.state.dataForSignup}
                             </div>
                         ) : null}
                     </div>
@@ -63,7 +64,8 @@ export class Signup extends Component {
                     </div>
 
                     <div className="link">
-                        <a href="#">or sign in to your account</a>
+                    <NavLink to="/login">or sign in to your account</NavLink>
+                        
                     </div>
                     <div className="name">
                         <label className="color_text">Name</label>
