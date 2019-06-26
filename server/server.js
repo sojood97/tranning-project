@@ -9,20 +9,25 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('../config/config');
 const passport = require('passport');
 
-const webpackConfig = require('../webpack.config');
+
+const webpackConfig = require("../webpack.config");
 
 const isDev = process.env.NODE_ENV !== 'production';
+
 const port = process.env.PORT || 8080;
 
+const passport = require("passport");
+
+//const passportSetup = require('../config/')
 
 const app = express();
-
 
 // Passport Config
 require('../config/passport/passport_login')(passport);
 //passport 
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 // Set up Mongoose
 mongoose.connect(isDev ? config.db_dev : config.db);
@@ -35,7 +40,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // API routes
-require('./routes')(app);
+require("./routes")(app);
 
 if (isDev) {
     const compiler = webpack(webpackConfig);
@@ -75,6 +80,7 @@ app.listen(port, '0.0.0.0', (err) => {
     }
 
     console.info('>>> 🌎 Open http://0.0.0.0:%s/ in your browser.', port);
+
 });
 
 module.exports = app;
