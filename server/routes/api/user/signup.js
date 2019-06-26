@@ -20,12 +20,9 @@ router.post("/", function(req, res) {
                 res.status(500).send("error occured");
             } else {
                 if (user) {
-                    console.log("email already exists");
-                    var m = res.JSON({ msg: "email already exists" });
-
-                    var s = JSON.stringify(m);
-                    console.log(m);
-                    console.log(s);
+                    res.json(
+                        "email already exists ,enter another email or login"
+                    );
                 } else {
                     var users = new User();
                     users.name = name;
@@ -36,7 +33,8 @@ router.post("/", function(req, res) {
                         if (err) {
                             res.status(500).send("db error");
                         } else {
-                            res.json({ user });
+                            // res.json({ user });
+                            // res.json("success  register");
                         }
                     });
                 }

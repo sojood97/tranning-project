@@ -17,10 +17,8 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.methods.hashPassword = password => {
-    console.log("encrypt password");
     return bcrypt.hashSync(password, bcrypt.genSaltSync(10));
 };
-
 
 let User = mongoose.model("User", userSchema);
 

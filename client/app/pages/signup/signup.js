@@ -7,10 +7,13 @@ export class Signup extends Component {
         this.state = {
             name: "",
             email: "",
-            password: ""
+            password: "",
+            data: ""
         };
+
         this.onSubmit = this.onSubmit.bind(this);
     }
+
     onSubmit(e) {
         e.preventDefault();
 
@@ -25,7 +28,18 @@ export class Signup extends Component {
             headers: new Headers({
                 "content-Type": "application/json"
             })
-        }).then(response => console.log(response.text));
+        })
+            .then(function(response) {
+                // The response is a Response instance.
+                // You parse the data into a useable format using .json()
+                return response.json();
+            })
+            .then(data => {
+                this.setState({ data: JSON.stringify(data) });
+
+                // data is the parsed version of the JSON returned from the above endpoint.
+                console.log(data);
+            });
     }
 
     render() {
@@ -36,6 +50,14 @@ export class Signup extends Component {
                         this.onSubmit(e);
                     }}
                 >
+                    <div>
+                        {this.state.data ? (
+                            <div className="email_not_found">
+                                {this.state.data}
+                            </div>
+                        ) : null}
+                    </div>
+
                     <div className="title">
                         <label>Create a Trello Account</label>
                     </div>
@@ -55,6 +77,7 @@ export class Signup extends Component {
                             name="name"
                         />
                     </div>
+
                     <div className="email">
                         <label className="color_text1">Email</label>
                         <input
