@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../../pages/signup/signup.scss";
 
-export class Signup extends Component {
+export default class Signup extends Component {
     constructor(props) {
         super(props);
         this.state = {

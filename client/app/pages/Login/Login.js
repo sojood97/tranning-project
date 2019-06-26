@@ -59,7 +59,7 @@ export default class Login extends Component {
                         {this.state.msg == '' ? null : <div className="error_div"><p>{this.state.msg.message}</p></div>}
                     </div>
                     <h1 className="headline_label">Log in to Trello</h1>
-                    <p><a className="link" href="">or create an account</a></p>
+                    <p><NavLink className="link_login" to="/signup">or create an account</NavLink></p>
                     <form onSubmit={(e) => { this.onSubmit(e) }}>
                         <div className="div_in_login">
                             <div className="div_in_login">
@@ -71,15 +71,15 @@ export default class Login extends Component {
                                 <input className="input_for_login" type="password" name="password"
                                     id="password" placeholder="e.g., ••••••••••••" onChange={(e) => { this.onChange(e) }} />
                             </div>
-                            <input id="login_button" type="submit" value="Log In" />
-                            <div className="google_button" tabIndex="0">
+                            <input className="login_button" type="submit" value="Log In" />
+                            <div className="google_button_login" tabIndex="0">
                                 <img src={google_icon} width='25' height='25' />
                                 <span className="google_label">Log in with Google</span>
                             </div>
                         </div>
                     </form>
-                    <p><a className="link" href="">Log in with SSO</a></p>
-                    <NavLink className="link" to="/reset_password">Forgot your password?</NavLink>
+                    <p><a className="link_login" href="">Log in with SSO</a></p>
+                    <NavLink className="link_login" to="/reset_password">Forgot your password?</NavLink>
                 </div>
             </section >
         );
