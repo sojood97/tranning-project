@@ -119,3 +119,12 @@
 .hint_label{
   color: hsl(0,0%,60%);
 }
+
+.error_div{
+  background: #eb5a46;
+  color: #fbedeb;
+  font-size: 14px;
+  padding: .1rem 1rem;
+  border-radius: 4px;
+  display: inline-block;
+}

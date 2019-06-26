@@ -19,7 +19,7 @@ const app = express();
 
 
 // Passport Config
-require('../config/passport/passport')(passport);
+require('../config/passport/passport_login')(passport);
 //passport 
 app.use(passport.initialize());
 app.use(passport.session());

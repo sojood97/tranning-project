@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 import "../Login/login.scss";
 import google_icon from '../../assets/images/google_Icon.png';
 
@@ -10,25 +10,18 @@ export default class Login extends Component {
         this.state = {
             email: '',
             password: '',
+            msg: [],
+            redirect: false
         };
+
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
-    }
-
-    componentDidMount() {
-        fetch('/api/users', {
-            method: 'GET',
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json',
-            },
-        })
-            .then(response => console.log(response.text()));
     }
 
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value });
     }
+
     onSubmit(e) {
         e.preventDefault();
         console.log("submit function");
@@ -40,13 +33,31 @@ export default class Login extends Component {
                 'Content-Type': 'application/json'
             }),
         })
-            .then(response => console.log(response.text()));
+            .then((response) => {
+                // The response is a Response instance.
+                // You parse the data into a useable format using `.json()`
+                return response.json();
+            }).then((data) => {
+                // `data` is the parsed version of the JSON returned from the above endpoint.
+                //console.log(data);  // { "userId": 1, "id": 1, "title": "...", "body": "..." }
+                if (data.status == "success") {
+                    localStorage.setItem('token', data.token);
+                    this.setState({ msg: [], redirect: true });
+                }
+                else {
+                    this.setState({ msg: data.msg, redirect: false });
+                }
+            });
     }
 
     render() {
         return (
             <section className="container_in_login">
+                <div>{this.state.redirect ? <Redirect to="/home" /> : null}</div>
                 <div className="div_in_login">
+                    <div>
+                        {this.state.msg == '' ? null : <div className="error_div"><p>{this.state.msg.message}</p></div>}
+                    </div>
                     <h1 className="headline_label">Log in to Trello</h1>
                     <p><a className="link" href="">or create an account</a></p>
                     <form onSubmit={(e) => { this.onSubmit(e) }}>
