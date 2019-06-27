@@ -26,7 +26,7 @@ export default class Login extends Component {
         e.preventDefault();
         console.log("submit function");
         let data = { 'email': this.state.email, 'password': this.state.password };
-        return fetch('/api/users', {
+        return fetch('/api/users/login', {
             method: 'POST', // 'GET', 'PUT', 'DELETE', etc.
             body: JSON.stringify(data), // Coordinate the body type with 'Content-Type'
             headers: new Headers({
@@ -73,7 +73,9 @@ export default class Login extends Component {
                             </div>
                             <input className="login_button" type="submit" value="Log In" />
                             <div className="google_button_login" tabIndex="0">
-                                <img src={google_icon} width='25' height='25' />
+                                <div className="login_google_icon">
+                                <img src={google_icon} width='25px' height='25px' />
+                                </div>
                                 <span className="google_label">Log in with Google</span>
                             </div>
                         </div>

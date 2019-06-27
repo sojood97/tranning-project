@@ -8,7 +8,7 @@ var VerifyToken = require('../../../../config/auth/VerifyToken');
 const User = require('../../../models/User');
 
 //Login
-router.post('/', (req, res, next) => {
+router.post('/login', (req, res, next) => {
     //console.log(req.body)
     passport.authenticate('local', function (err, user, info) {
         //console.log("app.post");
