@@ -9,7 +9,7 @@ export class Signup extends Component {
             email: "",
             password: "",
             dataForSignup: "",
-            flag:false
+            flag: false
         };
 
         this.onSubmit = this.onSubmit.bind(this);
@@ -36,7 +36,7 @@ export class Signup extends Component {
                 return response.json();
             })
             .then(data => {
-                this.setState({ dataForSignup: data , flag:true });
+                this.setState({ dataForSignup: data, flag: true });
 
                 // data is the parsed version of the JSON returned from the above endpoint.
                 console.log(data);
@@ -64,8 +64,9 @@ export class Signup extends Component {
                     </div>
 
                     <div className="link">
-                    <NavLink to="/login">or sign in to your account</NavLink>
-                        
+                        <NavLink to="/login">
+                            or sign in to your account
+                        </NavLink>
                     </div>
                     <div className="name">
                         <label className="color_text">Name</label>

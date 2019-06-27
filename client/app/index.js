@@ -1,19 +1,15 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import {Signup} from '../app/pages/signup/signup.js';
+import React from "react";
+import { render } from "react-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Signup } from "../app/pages/signup/signup.js";
 
+import Login from "./pages/Login/Login";
+import Reset_Password from "./pages/Login/reset_password/Reset_Password";
+import Home from "./pages/Home/Home";
+import About from "./pages/Home/About";
+import App from "./App";
 
-import Login from './pages/Login/Login';
-import Reset_Password from './pages/Login/reset_password/Reset_Password';
-import Home from './pages/Home/Home';
-import About from './pages/Home/About';
-import App from './App';
-
-
-
-render((
-
+render(
     <BrowserRouter>
         <div>
             <App />
@@ -22,11 +18,10 @@ render((
                 <Route path={"/reset_password"} component={Reset_Password} />
                 <Route path={"/home"} component={Home} />
                 <Route path={"/about"} component={About} />
-                <Route  path={"/signup"} component={Signup}/>
+                <Route path={"/signup"} component={Signup} />
             </Switch>
         </div>
-    </BrowserRouter>
+    </BrowserRouter>,
 
-), document.getElementById('app'));
-
-
+    document.getElementById("app")
+);
