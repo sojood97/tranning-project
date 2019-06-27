@@ -12,7 +12,8 @@
   "private": true,
   "scripts": {
     "start": "webpack -p --progress --profile --colors && node server",
-    "start:dev": "node server"
+    "start:dev": "node server",
+    "heroku-prebuild": "npm install --dev"
   },
   "engines": {
     "node": ">=6"
@@ -47,6 +48,7 @@
     "sequelize": "^5.8.11",
     "webpack-cli": "^2.0.13",
     "webpack-merge": "^4.1.2",
+    "webpack": "^4.2.0",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
@@ -57,7 +59,6 @@
     "nodemon": "^1.17.2",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
-    "webpack": "^4.2.0",
     "webpack-dev-middleware": "^3.0.1",
     "webpack-hot-middleware": "^2.21.2",
     "file-loader": "^4.0.0"
