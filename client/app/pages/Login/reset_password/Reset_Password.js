@@ -13,7 +13,7 @@ export default class Reset_Password extends Component {
                     </div>
                     <div className="header_right">
                         <NavLink to="/login" className="header_link">Log In</NavLink>
-                        <a href="" className="header_link">Sign Up</a>
+                        <NavLink className="header_link" to="/signup">Sign Up</NavLink>
                     </div>
                 </header>
                 <section className="body_section">

@@ -6,14 +6,12 @@ import google_icon from '../../assets/images/google_Icon.png';
 export default class Login extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
             email: '',
             password: '',
             msg: [],
             redirect: false
         };
-
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
     }
@@ -72,9 +70,9 @@ export default class Login extends Component {
                                     id="password" placeholder="e.g., ••••••••••••" onChange={(e) => { this.onChange(e) }} />
                             </div>
                             <input className="login_button" type="submit" value="Log In" />
-                            <div className="google_button_login" tabIndex="0">
+                            <div className="google_button_login">
                                 <div className="login_google_icon">
-                                <img src={google_icon} width='25px' height='25px' />
+                                    <img src={google_icon} width='25px' height='25px' />
                                 </div>
                                 <span className="google_label">Log in with Google</span>
                             </div>
