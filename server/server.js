@@ -29,7 +29,14 @@ app.use(passport.session());
 
 // Set up Mongoose
 mongoose.connect(isDev ? config.db_dev : config.db , function(err) {
-    if (err) console.log(err) ;
+    if (err) {
+
+        
+        console.log(err) ;
+    }
+    else {
+        console.log("sssssssssss")
+    }
 });
 mongoose.Promise = global.Promise;
 
