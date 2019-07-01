@@ -31,7 +31,7 @@ app.use(passport.session());
 mongoose.connect(isDev ? config.db_dev : config.db , function(err) {
     if (err) {
 
-        
+
         console.log(err) ;
     }
     else {
@@ -78,8 +78,8 @@ if (isDev) {
     });
 }
 
-const seed = require('../config/seed/seed');
-seed();
+//const seed = require('../config/seed/seed');
+//seed();
 
 app.listen(port, '0.0.0.0', (err) => {
     if (err) {

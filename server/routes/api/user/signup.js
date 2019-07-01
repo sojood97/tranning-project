@@ -34,7 +34,7 @@ router.post("/signup", function(req, res) {
                             res.status(500).send("db error");
                         } else {
                             // res.json({ user });
-                            // res.json("success  register");
+                             res.json("success  register");
                         }
                     });
                 }
