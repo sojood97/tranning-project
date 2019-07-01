@@ -28,10 +28,8 @@ app.use(passport.session());
 
 
 // Set up Mongoose
-mongoose.connect(isDev ? config.db_dev : config.db , function(err) {
+mongoose.connect( process.env.DATABASE_URL , function(err) {
     if (err) {
-
-
         console.log(err) ;
     }
     else {
