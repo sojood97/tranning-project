@@ -19,7 +19,7 @@ export default class App extends Component {
     }
 
     componentDidMount() {
-        //localStorage.clear('token');
+        localStorage.clear('token');
         fetch('/api/users/me', {
             method: 'GET', // 'GET', 'PUT', 'DELETE', etc.
             headers: headers()
