@@ -28,7 +28,9 @@ app.use(passport.session());
 
 
 // Set up Mongoose
-mongoose.connect(isDev ? config.db_dev : config.db);
+mongoose.connect(isDev ? config.db_dev : config.db , function(err) {
+    if (err) throw err;
+});
 mongoose.Promise = global.Promise;
 
 //app.use(express.urlencoded({ extended: true }));
