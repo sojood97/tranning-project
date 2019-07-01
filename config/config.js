@@ -5,6 +5,6 @@
 };*/
 
 module.exports = {
-    db: 'mongodb+srv://FutnaShoqo:fatoon25619930123@1@cluster0-t1hpa.mongodb.net/test?retryWrites=true&w=majority',
-    db_dev: 'mongodb+srv://FutnaShoqo:fatoon25619930123@1@cluster0-t1hpa.mongodb.net/test?retryWrites=true&w=majority',
+    db: 'mongodb+srv://Futna Shoqo:fatoon25619930123@1@cluster0-t1hpa.mongodb.net/test?retryWrites=true&w=majority',
+    db_dev: 'mongodb+srv://Futna Shoqo:fatoon25619930123@1@cluster0-t1hpa.mongodb.net/test?retryWrites=true&w=majority',
 };
