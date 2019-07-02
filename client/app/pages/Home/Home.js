@@ -8,7 +8,7 @@ export default class Home extends Component {
         return (
             <div>
                 <h1>Hello</h1>
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/borad">About</NavLink>
             </div>
         );
     }

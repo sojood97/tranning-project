@@ -33,7 +33,7 @@ mongoose.connect(process.env.DATABASE_URL || (isDev ? config.db_dev : config.db 
         console.log(err) ;
     }
     else {
-        console.log("sssssssssss")
+        console.log("success connect to MongoDB")
     }
 });
 mongoose.Promise = global.Promise;
