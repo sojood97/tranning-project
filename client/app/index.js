@@ -13,7 +13,7 @@ import App from './App';
 render((
     <BrowserRouter>
         <div>
-            <Board />
+            <App/>
             <Switch>
                 <Route path={"/login"} component={Login} />
                 <Route path={"/reset_password"} component={Reset_Password} />
