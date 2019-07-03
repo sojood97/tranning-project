@@ -19,7 +19,7 @@ const Header = () => (
         <span className="trello_text_span">
             <NavLink to="/home" className="trello_link_span">
                 <FontAwesomeIcon icon={faTrello} />
-                Trellocd c
+                Trello
             </NavLink>
         </span>
         <div className="board_header_right">
