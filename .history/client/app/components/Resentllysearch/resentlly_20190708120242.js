@@ -26,8 +26,10 @@ import Recently from "../../assets/images/Recently.png";
             </NavLink>
            
         </div>
-        <div className="two-board">
-            
+        <div className="two">
+            <div className="person">
+
+            </div>
             <div className="person">
                 <img src={person} className="image-person" />
 

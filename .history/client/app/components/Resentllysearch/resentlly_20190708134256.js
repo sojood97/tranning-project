@@ -41,7 +41,7 @@ import Recently from "../../assets/images/Recently.png";
             <label className="view1">Personal Boards</label>
                 <ul className="board-test2">
                     <board  className="board-test2">
-                        <label className="create1">create new board</label>
+                        <label className="board-test2">create new board</label>
                     </board>
                 </ul>
             </div>

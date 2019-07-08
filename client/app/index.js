@@ -8,6 +8,9 @@ import Reset_Password from "./pages/Login/reset_password/Reset_Password";
 import Home from "./pages/Home/Home";
 import About from "./pages/Home/About";
 import App from "./App";
+import Board from "./pages/Board/Board";
+import Boards1 from "./pages/Boards1/Boards1";
+import Home1 from "./pages/Home1/Home1";
 
 render(
     <BrowserRouter>
@@ -19,6 +22,9 @@ render(
                 <Route path={"/home"} component={Home} />
                 <Route path={"/about"} component={About} />
                 <Route path={"/signup"} component={Signup} />
+                <Route path={"/Board"} component={Board}/>
+                <Route path={"/Boards1"} component={Boards1}/>
+                <Route path={"/Home1"} component={Home1} />
             </Switch>
         </div>
     </BrowserRouter>,

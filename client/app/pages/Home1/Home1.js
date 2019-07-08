@@ -11,7 +11,7 @@ export default class Home extends Component {
             <div>
                 
                 <Header/>
-                <div className="home">
+                <div className="style-page1">
                 <Body/>
                 <Homecomponent/>
                 </div>

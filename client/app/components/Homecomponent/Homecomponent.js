@@ -36,6 +36,7 @@ const Homecomponent = () => (
         <div className="third-view">
             <div className="recent">
                 <p>
+                    
                     <img src={Recently} className="image-recentlly" />
                     Recently Viewed
                 </p>

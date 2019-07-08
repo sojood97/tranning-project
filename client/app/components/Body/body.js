@@ -15,7 +15,7 @@ import Boards1 from "../../pages/Boards1/Boards1";
 import Home1 from "../../pages/Home1/Home1";
 import Board from "../../pages/Board/Board";
 
-export default class Body extends Component {
+ export class Body extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -135,3 +135,5 @@ export default class Body extends Component {
         );
     }
 }
+
+export default Body;

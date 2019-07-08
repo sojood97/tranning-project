@@ -27,7 +27,9 @@ import Recently from "../../assets/images/Recently.png";
            
         </div>
         <div className="two-board">
-            
+            <div className="person">
+
+            </div>
             <div className="person">
                 <img src={person} className="image-person" />
 

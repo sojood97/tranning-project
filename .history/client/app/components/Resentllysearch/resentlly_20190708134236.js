@@ -40,7 +40,7 @@ import Recently from "../../assets/images/Recently.png";
             <div className="create-new ">
             <label className="view1">Personal Boards</label>
                 <ul className="board-test2">
-                    <board  className="board-test2">
+                    <board  >
                         <label className="create1">create new board</label>
                     </board>
                 </ul>
