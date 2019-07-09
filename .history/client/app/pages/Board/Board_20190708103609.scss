@@ -1,0 +1,342 @@
+.board_container {
+    line-height: 27px;
+}
+
+.board_body {
+    background-color: rgb(75, 191, 107);
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.board_body_header {
+    display: flex;
+    flex-direction: row;
+}
+
+.board_icon {
+    background-color: hsla(0, 0%, 100%, 0.3);
+    border-radius: 3px;
+    box-shadow: none;
+    color: #fff;
+    padding: 4px;
+    vertical-align: middle;
+    margin: 4px;
+    text-decoration: none;
+}
+
+.board_icon:hover {
+    background-color: hsla(0, 0%, 100%, 0.2);
+}
+
+.trello_link_span {
+    color: hsla(0, 0%, 100%, 0.5);
+    box-shadow: none;
+    padding: 4px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.trello_link_span:hover {
+    box-shadow: none;
+    color: #fff;
+}
+
+.board_header_right {
+    display: inherit;
+    position: fixed;
+    right: 7px;
+    vertical-align: middle;
+}
+
+.star_icon {
+    box-shadow: none;
+    color: #fff;
+    padding: 4px;
+    vertical-align: middle;
+    margin: 4px;
+    text-decoration: none;
+}
+
+.star_icon:hover {
+    background-color: rgba(10, 56, 20, 0.589);
+    border-radius: 3px;
+}
+
+.vertical_line_div {
+    border-left: 1.5px solid hsla(0, 0%, 100%, 0.329);
+    height: 12px;
+    padding: 4px;
+    margin-top: 11px;
+    margin-left: 4px;
+}
+
+.board_show_menu {
+    box-shadow: none;
+    color: #fff;
+    padding: 4px;
+    vertical-align: middle;
+    margin: 4px;
+    right: 1%;
+    position: fixed;
+    text-decoration: none;
+}
+
+.board_show_menu:hover {
+    background-color: rgba(10, 56, 20, 0.589);
+    border-radius: 3px;
+}
+
+.board_points {
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.board_show_menu_text {
+    text-decoration: underline;
+}
+
+.change_name {
+    padding: 4px;
+    vertical-align: middle;
+    margin: 4px;
+}
+
+.member_circle {
+    border-radius: 100%;
+    display: inline-flex;
+    background-color: rgb(223, 225, 230);
+    justify-content: center;
+    vertical-align: middle;
+    margin: 4px;
+    box-shadow: none;
+    color: black;
+    padding: 4px;
+}
+
+.member_circle:hover {
+    cursor: pointer;
+    background-color: rgb(182, 183, 185);
+}
+
+.board_lists {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    background-color: rgb(75, 191, 107);
+}
+
+.list_wrap {
+    width: 272px;
+    margin: 0 4px;
+    height: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.list_itself {
+    background-color: #dfe1e6;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    //position: relative;
+}
+
+.list_title_action {
+    display: flex;
+    flex-direction: row;
+    margin: 4px;
+}
+
+.list_title {
+    text-shadow: none;
+    border: none;
+    background: none;
+    width: 212px;
+}
+
+.list_title:hover {
+    cursor: pointer;
+}
+
+.list_title:focus {
+    margin: 4px;
+    background-color: #fff;
+}
+
+.list_actions {
+    position: sticky;
+    left: 100%;
+    margin: 4px;
+}
+
+.points_link {
+    text-decoration: none;
+    color: rgba(40, 42, 46, 0.658);
+    font-weight: bold;
+    vertical-align: top;
+    padding: 6px;
+}
+
+.list_actions:hover {
+    background-color: rgba(9, 30, 66, 0.13);
+    border-radius: 3px;
+}
+
+.list_cards {
+    margin: 4px;
+}
+
+.list_card_itself {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+    cursor: pointer;
+    display: block;
+    margin: 4px;
+    margin-bottom: 8px;
+    padding: 6px;
+    max-width: 300px;
+    min-height: 20px;
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+
+.list_card_itself:hover {
+    background-color: rgba(116, 122, 79, 0.253);
+}
+
+.add_another_card {
+    padding: 8px;
+    text-decoration: none;
+    color: rgba(40, 42, 46, 0.658);
+}
+
+.add_another_card:hover {
+    background-color: rgba(9, 30, 66, 0.13);
+    text-decoration-line: underline;
+    color: rgba(40, 42, 46, 0.842);
+    cursor: pointer;
+}
+
+.add_another_list {
+    background-color: rgba(46, 163, 91, 0.918);
+    padding: 8px;
+    text-decoration: none;
+    color: rgba(217, 219, 223, 0.767);
+    border-radius: 3px;
+    width: 272px;
+    margin: 0 4px;
+    height: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.add_another_list:hover {
+    background-color: rgba(21, 77, 42, 0.801);
+}
+
+
+
+
+.menu_actions {
+    display: block;
+    position: absolute;
+    color: #172b4d;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    height: 367px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 8px 16px -4px rgba(9, 30, 66, 0.25),
+        0 0 0 1px rgba(9, 30, 66, 0.08);
+    overflow: hidden;
+    width: 304px;
+}
+/*
+.actions_dev {
+    //padding: 0 12px 12px;
+    //margin: 8px ;
+}
+*/
+
+.title_menu {
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.close_list_action {
+    text-decoration: none;
+    color: #6b778c;
+    padding: 10px 12px 10px 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.close_list_action:hover {
+    cursor: pointer;
+}
+
+.ull {
+    padding-left: 12px;
+}
+
+.lii {
+    list-style: none;
+}
+
+._hr {
+    background-color: rgba(9, 30, 66, 0.13);
+    border: 0;
+    height: 1px;
+    margin-left: 8px;
+    width: 280px;
+    box-sizing: content-box;
+}
+
+.choice_itself {
+    cursor: pointer;
+    display: block;
+    font-weight: 400;
+    padding: 6px 12px;
+    position: relative;
+    margin: 0 -12px;
+    text-decoration: none;
+    color: #172b4d;
+    background-color: transparent;
+}
+
+.choice_itself:hover {
+    background-color: rgba(9, 30, 66, 0.04);
+}
+
+.menu_member {
+    display: block;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 8px 16px -4px rgba(9, 30, 66, 0.25),
+        0 0 0 1px rgba(9, 30, 66, 0.08);
+    //overflow: hidden;
+    position: absolute;
+    width: 304px;
+    left: 120.609px;
+    top: 84px;
+
+    .member_circle {
+        border-radius: 100%;
+        position: relative;
+        background-color: rgb(223, 225, 230);
+        width: 50px;
+        height: 50px;
+        box-shadow: none;
+        color: black;
+        font-weight: 700;
+        line-height: 50px;
+    }
+}
