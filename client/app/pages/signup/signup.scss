@@ -1,0 +1,197 @@
+.all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    padding-top: 3.75rem;
+    padding-left: 9.375rem;
+    font-size: 2.1875rem;
+    font-weight: 800;
+    font-family: sans-serif;
+}
+
+.name {
+    padding-left: 9.375rem;
+    padding-top: 1.25rem;
+    font-size: 1.5625rem;
+    font-family: Calibri;
+    flex-direction: column;
+    width: 3.125rem;
+    font-weight: 400;
+    line-height: 3.175rem;
+    text-align: center;
+}
+
+.text_name {
+    background: hsla(120, 7%, 92%, 0.97);
+    border-radius: 0.1875rem;
+    font-size: 1.25rem;
+    padding-left: 0.625rem;
+    width: 26.25rem;
+    height: 2.9375rem;
+    border-color: whitesmoke;
+    border-top-width: 0.05ch;
+    border-left-width: 0.05ch;
+    border-block-end-color: silver;
+    border-block-end-width: 0.05ch;
+    border-right-color: silver;
+    border-right-width: 0.05ch;
+}
+
+.text_email {
+    background: hsla(120, 7%, 92%, 0.97);
+    border-radius: 0.1875rem;
+    font-size: 1.25rem;
+    padding-left: 0.625rem;
+    width: 26.25rem;
+    height: 2.9375rem;
+    border-color: whitesmoke;
+    border-top-width: 0.05ch;
+    border-left-width: 0.05ch;
+    border-block-end-color: silver;
+    border-block-end-width: 0.05ch;
+    border-right-color: silver;
+    border-right-width: 0.05ch;
+}
+
+.text_pasword {
+    background: hsla(120, 7%, 92%, 0.97);
+    border-radius: 0.1875rem;
+    font-size: 1.25rem;
+    padding-left: 0.625rem;
+    width: 26.25rem;
+    height: 2.9375rem;
+    border-color: whitesmoke;
+    border-top-width: 0.05ch;
+    border-left-width: 0.05ch;
+    border-block-end-color: silver;
+    border-block-end-width: 0.05ch;
+    border-right-color: silver;
+    border-right-width: 0.05ch;
+}
+
+.email {
+    padding-left: 9.375rem;
+    padding-top: 1.25rem;
+    font-size: 1.5625rem;
+    font-family: Calibri;
+    flex-direction: column;
+    width: 3.125rem;
+    line-height: 3.175rem;
+    border-color: whitesmoke;
+    font-weight: 400;
+}
+
+.password {
+    padding-left: 9.375rem;
+    padding-top: 1.25rem;
+    font-size: 1.5625rem;
+    font-family: Calibri;
+    flex-direction: column;
+    width: 3.125rem;
+    line-height: 3.175rem;
+    border-color: whitesmoke;
+    font-weight: 400;
+}
+
+.new {
+    padding-left: 9.375rem;
+    padding-top: 1.25rem;
+    width: 37.5rem;
+    font-size: 1.5625rem;
+    font-family: Calibri;
+    font-weight: bold;
+}
+
+.google {
+    padding-left: 9.375rem;
+    padding-top: 1.25rem;
+    font-size: 1.25rem;
+    text-align: center;
+    text-decoration-color: silver;
+    font-weight: 500;
+    padding-right: 4.375rem;
+    width: 12.5rem;
+    font-family: Calibri;
+}
+
+.link {
+    font-size: 1.25rem;
+    padding-left: 10.625rem;
+}
+
+.google_button {
+    background-color: white;
+    color: rgba(88, 86, 85, 0.81);
+    width: 27.2rem;
+    height: 3rem;
+    border-top-width: 0.2ch;
+    border-left-width: 0.2ch;
+    border-block-end-width: 0.2ch;
+    border-right-width: 0.2ch;
+    border-bottom-color: rgba(252, 255, 252, 0.25);
+    border-right-color: rgba(252, 255, 252, 0.25);
+    border-radius: 0.1875rem;
+    padding-top: 0.0625rem;
+}
+
+.new_button {
+    color: rgba(130, 127, 125, 0.81);
+    width: 27.2rem;
+    height: 3rem;
+    border-color: white;
+    border: 0;
+    font-weight: bold;
+    border-radius: 0.1875rem;
+}
+
+a {
+    color: #66c2ff;
+}
+
+.color_text {
+    color: rgba(21, 30, 13, 0.61);
+    padding-top: 0.9375rem;
+}
+
+.color_text1 {
+    color: rgba(21, 30, 13, 0.61);
+    padding-top: 0.9375rem;
+}
+
+.color_text2 {
+    color: rgba(21, 30, 13, 0.61);
+    padding-top: 0.9375rem;
+}
+
+.image {
+    padding-right: 1.25rem;
+}
+
+.privacy {
+    font-size: 1.0625rem;
+    font-weight: 100;
+    width: 26.25rem;
+    height: 2.9375rem;
+    padding-left: 9.375rem;
+    padding-bottom: 9.375rem;
+    padding-top: 1.875rem;
+    color: rgba(132, 132, 132, 0.87);
+    font-family: Calibri;
+}
+
+.email_not_found {
+    color: white;
+    padding-top: 1rem;
+    padding-left: 2em;
+    border-radius: 4px;
+    border: 1px solid red;
+    width: 20rem;
+    height: 2.5rem;
+    background-color: red;
+    align-content: center;
+    margin-left: 10rem;
+    margin-top: 2rem;
+}
