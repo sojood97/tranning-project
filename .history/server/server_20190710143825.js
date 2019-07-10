@@ -71,7 +71,7 @@ if (isDev) {
     app.use(express.static(path.resolve(__dirname, '../dist')));
 } else {
     app.use(express.static(path.resolve(__dirname, '../dist')));
-    app.get('/index.html', function (req, res) {
+    app.get('/index.ht', function (req, res) {
         res.send('Welcome to Passport with Sequelize and without HandleBars');
     });
 }
