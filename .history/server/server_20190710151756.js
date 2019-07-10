@@ -74,7 +74,7 @@ if (isDev) {
 } else {
     app.use(express.static(path.resolve(__dirname, '../dist')));
     app.get('/', function (req, res) {
-        res.send( "wellcom to passport");
+        res.send( "w");
     });
 }
 
