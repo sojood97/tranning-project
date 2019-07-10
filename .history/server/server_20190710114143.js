@@ -19,27 +19,7 @@ const port = process.env.PORT || 8080;
 //const passportSetup = require('../config/')
 
 const app = express();
-const http = require('http');
 
-process
-  .on('SIGTERM', shutdown('SIGTERM'))
-  .on('SIGINT', shutdown('SIGINT'))
-  .on('uncaughtException', shutdown('uncaughtException'));
-
-setInterval(console.log.bind(console, 'tick'), 1000);
-http.createServer((req, res) => res.end('hi'))
-  .listen(process.env.PORT || 87954324, () => console.log('Listening'));
-
-function shutdown(signal) {
-  return (err) => {
-    console.log(`${ signal }...`);
-    if (err) console.error(err.stack || err);
-    setTimeout(() => {
-      console.log('...waited 5s, exiting.');
-      process.exit(err ? 1 : 0);
-    }, 5000).unref();
-  };
-}
 // Passport Config
 require('../config/passport/passport_login')(passport);
 //passport 
