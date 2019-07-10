@@ -14,7 +14,6 @@ var server = http.createServer(function(request, response) {
     response.end("text");
   
   });
-  
 const webpackConfig = require("../webpack.config");
 
 const isDev = process.env.NODE_ENV !== 'production';
