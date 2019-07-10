@@ -53,7 +53,7 @@ export default class Board extends Component {
                             type="text"
                             className="change_name"
                         />
-                        <NavLi className="star_icon"><FontAwesomeIcon icon={faStar} size="1x" /></NavLink>
+                        <NavLink to="" className="star_icon"><FontAwesomeIcon icon={faStar} size="1x" /></NavLink>
                         <div className="vertical_line_div"></div>
                         <span className="member_circle" onClick={(e) => { this.showMember(e) }}>FS</span>
                         {
