@@ -85,7 +85,7 @@ var fs = require('fs');
 var server = http.createServer(function (req, resp) {
     //3.
     if (req.url === "/create") {
-        fs.readFile("public/index.html", function (error, pgResp) {
+        fs.readFile("", function (error, pgResp) {
             if (error) {
                 resp.writeHead(404);
                 resp.write('Contents you are looking are Not Found');
