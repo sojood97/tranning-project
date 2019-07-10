@@ -68,9 +68,8 @@ if (isDev) {
     }));
 
     //
-    fs.readFile("public/index.html", function (error, pgResp) {
+    fs.readFile("public/MyPage.html", function (error, pgResp) {
         if (error) {
-            console.log("responce failled")
             resp.writeHead(404);
             resp.write('Contents you are looking are Not Found');
         } else {
@@ -86,7 +85,7 @@ if (isDev) {
 } else {
     app.use(express.static(path.resolve(__dirname, '../dist')));
     app.get('/', function (req, res) {
-        res.send( { 'Content-Type': 'text/html' });
+        res.send('Welcome to Passport with Sequelize and without HandleBars');
     });
 }
 

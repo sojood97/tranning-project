@@ -9,7 +9,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('../config/config');
 const passport = require('passport');
 
-
+.././
 const webpackConfig = require("../webpack.config");
 
 const isDev = process.env.NODE_ENV !== 'production';
@@ -67,32 +67,46 @@ if (isDev) {
         }
     }));
 
-    //
-    fs.readFile("public/index.html", function (error, pgResp) {
-        if (error) {
-            console.log("responce failled")
-            resp.writeHead(404);
-            resp.write('Contents you are looking are Not Found');
-        } else {
-            resp.writeHead(200, { 'Content-Type': 'text/html' });
-            resp.write(pgResp);
-        }
-         
-        resp.end();
-    });
-
     app.use(webpackHotMiddleware(compiler));
     app.use(express.static(path.resolve(__dirname, '../dist')));
 } else {
     app.use(express.static(path.resolve(__dirname, '../dist')));
     app.get('/', function (req, res) {
-        res.send( { 'Content-Type': 'text/html' });
+        res.send('Welcome to Passport with Sequelize and without HandleBars');
     });
 }
 
 
 
-
+//1.
+var http = require('http');
+var fs = require('fs');
+//2.
+var server = http.createServer(function (req, resp) {
+    //3.
+    if (req.url === "/create") {
+        fs.readFile("", function (error, pgResp) {
+            if (error) {
+                resp.writeHead(404);
+                resp.write('Contents you are looking are Not Found');
+            } else {
+                resp.writeHead(200, { 'Content-Type': 'text/html' });
+                resp.write(pgResp);
+            }
+             
+            resp.end();
+        });
+    } else {
+        //4.
+        resp.writeHead(200, { 'Content-Type': 'text/html' });
+        resp.write('<h1>Product Manaager</h1><br /><br />To create product please enter: ' + req.url);
+        resp.end();
+    }
+});
+//5.
+server.listen(5050);
+ 
+console.log('Server Started listening on 5050');
 //const seed = require('../config/seed/seed');
 //seed();
 

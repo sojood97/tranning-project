@@ -70,7 +70,7 @@ if (isDev) {
     //
     fs.readFile("public/index.html", function (error, pgResp) {
         if (error) {
-            console.log("responce failled")
+            console.log("")
             resp.writeHead(404);
             resp.write('Contents you are looking are Not Found');
         } else {
