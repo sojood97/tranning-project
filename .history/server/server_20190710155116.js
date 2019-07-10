@@ -70,7 +70,7 @@ if (isDev) {
     app.use(webpackHotMiddleware(compiler));
     app.use(express.static(path.resolve(_dirname, '../client/public')));
 } else {
-    app.use(express.static(path.resolve(_dirname, '../client/public')));
+    app.use(express.static(path.resolve(__dirname, '../dist')));
     app.get('/', function (req, res) {
         res.send('Welcome to Passport with Sequelize and without HandleBars');
     });
