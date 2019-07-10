@@ -10,6 +10,7 @@ const config = require('../config/config');
 const passport = require('passport');
 
 
+
 const webpackConfig = require("../webpack.config");
 
 const isDev = process.env.NODE_ENV !== 'production';
@@ -67,14 +68,19 @@ if (isDev) {
         }
     }));
 
+    //
+    
     app.use(webpackHotMiddleware(compiler));
     app.use(express.static(path.resolve(__dirname, '../dist')));
 } else {
     app.use(express.static(path.resolve(__dirname, '../dist')));
     app.get('/', function (req, res) {
-        res.send('Welcome to Passport with Sequelize and without HandleBars');
+        res.send( "path.join('/index.html')");
     });
 }
+
+
+
 
 //const seed = require('../config/seed/seed');
 //seed();
