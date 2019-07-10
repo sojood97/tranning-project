@@ -17,7 +17,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 const port = process.env.PORT || 8080;
 
 //const passportSetup = require('../config/')
-var http = require('http');
+var {http}
 const app = express();
 
 // Passport Config

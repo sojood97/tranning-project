@@ -8,7 +8,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 
 const config = require('../config/config');
 const passport = require('passport');
-import index from '../client/public/index.html';
+
 
 const webpackConfig = require("../webpack.config");
 
@@ -17,7 +17,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 const port = process.env.PORT || 8080;
 
 //const passportSetup = require('../config/')
-var http = require('http');
+
 const app = express();
 
 // Passport Config
@@ -74,7 +74,7 @@ if (isDev) {
 } else {
     app.use(express.static(path.resolve(__dirname, '../dist')));
     app.get('/', function (req, res) {
-        res.send( {index});
+        res.send( "welcom to passport");
     });
 }
 
