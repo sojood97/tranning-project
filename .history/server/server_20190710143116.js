@@ -72,7 +72,7 @@ if (isDev) {
 } else {
     app.use(express.static(path.resolve(__dirname, '../dist')));
     app.get('/', function (req, res) {
-        res.send('index.html');
+        res.send(in);
     });
 }
 
