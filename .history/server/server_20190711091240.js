@@ -73,7 +73,7 @@ if (isDev) {
     app.use(express.static(path.resolve(__dirname, '../dist')));
 
     app.get('/', function (req, res) {
-        console.log("sojood");
+        co
         res.sendFile(path.resolve(__dirname, '../dist/index.html'));
         res.end();
       });
