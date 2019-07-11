@@ -5,7 +5,7 @@ const path = require('path');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
-
+const fs = require('fs');
 const config = require('../config/config');
 const passport = require('passport');
 
@@ -20,13 +20,6 @@ const port = process.env.PORT || 8080;
 
 const app = express();
 
-
-
-process.on('SIGTERM', () => {
-    server.close(() => {
-      console.log('Process terminated')
-    })
-  })
 // Passport Config
 require('../config/passport/passport_login')(passport);
 //passport 
