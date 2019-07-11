@@ -16,7 +16,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 
 const port = process.env.PORT || 8080;
 
-//const passportSetup = require('../config/')
+//const passportSetup = require('../config/')np
 
 const app = express();
 
@@ -75,8 +75,7 @@ if (isDev) {
     app.use(express.static(path.resolve(__dirname, '../dist')));
 
     app.get('/', function (req, res) {
-        //res.sendFile(path.resolve(__dirname , '../dist/index.html'));
-        res.send("Hello World!");
+        res.sendFile(path.resolve(__dirname , '../dist/index.html'));
         res.end();
       });
       
