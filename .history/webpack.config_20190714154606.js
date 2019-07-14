@@ -147,5 +147,3 @@ plugins: [
 
 // export configuration
 module.exports = baseConfig;
-
-*/

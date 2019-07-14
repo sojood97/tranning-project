@@ -115,10 +115,9 @@ var baseConfig = {
             })
         }
         */
-       /*
     ]
 },
-
+*/
 plugins: [
   new webpack.HotModuleReplacementPlugin(),
 
@@ -147,5 +146,3 @@ plugins: [
 
 // export configuration
 module.exports = baseConfig;
-
-*/

@@ -115,7 +115,6 @@ var baseConfig = {
             })
         }
         */
-       /*
     ]
 },
 
@@ -147,5 +146,3 @@ plugins: [
 
 // export configuration
 module.exports = baseConfig;
-
-*/
