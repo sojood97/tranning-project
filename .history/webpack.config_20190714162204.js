@@ -114,7 +114,7 @@ var baseConfig = {
                 ]
             })
         }
-       
+        */
     ]
 },
 plugins: [
