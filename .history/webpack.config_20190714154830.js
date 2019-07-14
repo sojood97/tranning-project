@@ -20,7 +20,7 @@ switch (process.env.NODE_ENV) {
   default:
     module.exports = require('./config/webpack.dev');
 }
-
+/*
 
 var baseConfig = {
   entry: {
@@ -117,6 +117,7 @@ var baseConfig = {
         */
     ]
 },
+
 plugins: [
   new webpack.HotModuleReplacementPlugin(),
 
