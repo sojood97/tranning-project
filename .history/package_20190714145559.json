@@ -10,7 +10,7 @@
     "license": "MIT",
     "private": true,
     "scripts": {
-        "start": "webpack-dev-server ,node server.js ",
+        "start": "webpack-dev-server ,"node server.js ",
         "start:dev": "node server",
         "build": "webpack"
     },
