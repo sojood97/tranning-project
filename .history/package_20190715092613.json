@@ -81,6 +81,7 @@
     },
     "peerDependencies": {
         "history": "1.x",
-        "node-sass": "^4.12.0"
-    }
+        //
+        "node-sass": "^3.4.2"
+      }
 }
