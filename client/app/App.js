@@ -44,7 +44,7 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                {this.state.isLogin ? (<Redirect to="/home" data={this.state.data} />) : (<Redirect to="/login" />)}
+                {this.state.isLogin ? (<Redirect to="/home" data={this.state.data} />) : (<Redirect to="/signup" />)}
             </div>
         );
     }
