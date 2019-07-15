@@ -70,12 +70,12 @@ if (isDev) {
     }));
 
     app.use(webpackHotMiddleware(compiler));
-    app.use(express.static(path.resolve(__dirname, '../dist')));
+    app.use(express.static(path.resolve(__dirname, '../buildfile')));
 } else {
-    app.use(express.static(path.resolve(__dirname, '../dist')));
+    app.use(express.static(path.resolve(__dirname, '../buildfile')));
 
     app.get('/', function (req, res) {
-        res.sendFile(path.resolve(__dirname , '../dist/index.html'));
+        res.sendFile(path.resolve(__dirname , '../buildfile/index.html'));
         //res.send("Hello World!");
         res.end();
       });
