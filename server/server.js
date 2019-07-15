@@ -49,7 +49,7 @@ app.use(bodyParser.json());
 // API routes
 require("./routes")(app);
 
-if (isDev && false) {
+if (isDev ) {
     const compiler = webpack(webpackConfig);
 
     app.use(historyApiFallback({
