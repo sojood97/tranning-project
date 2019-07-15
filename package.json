@@ -35,6 +35,8 @@
         "bcrypt-nodejs": "0.0.3",
         "body-parser": "^1.19.0",
         "bootstrap": "^4.3.1",
+        "child-process": "^1.0.2",
+        "child-process-promise": "^2.2.1",
         "connect-flash": "^0.1.1",
         "connect-history-api-fallback": "^1.5.0",
         "copy-webpack-plugin": "^4.5.1",
@@ -87,10 +89,10 @@
         "history": "1.x",
         "node-sass": "^4.12.0"
     },
-    "browser":{
+    "browser": {
         "child_process": false
-        } ,
-        "optionalDependencies": {
-            "fsevents": "^1.2.4"
-          } 
+    },
+    "optionalDependencies": {
+        "fsevents": "^1.2.4"
+    }
 }

@@ -28,7 +28,8 @@ var baseConfig = {
         main: "./client/app/index.js"
     },
     node: {
-        fs: 'empty'
+        fs: 'empty',
+        "child_process":false
     },
     output: {
         filename: "main.js",
