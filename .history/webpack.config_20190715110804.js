@@ -21,9 +21,9 @@ switch (process.env.NODE_ENV) {
         module.exports = require("./config/webpack.dev");
 }
 
-var config = Encore.getWebpackConfig();
-config.node = { fs: 'empty' };
-module.exports = config;
+node: {
+    fs: "empty"
+ }
 
 var baseConfig = {
     entry: {
