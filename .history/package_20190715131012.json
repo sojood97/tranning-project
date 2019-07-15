@@ -89,5 +89,5 @@
         "history": "1.x",
         "node-sass": "^4.12.0"
     },
-   " browser": { "fs": false, "child_process": false }
+   " browser": { "fs": false, ":": false }
 }
