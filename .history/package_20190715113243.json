@@ -92,5 +92,5 @@
         } ,
         "optionalDependencies": {
             "fsevents": "^1.2.4"
-          } 
+          }, 
 }
