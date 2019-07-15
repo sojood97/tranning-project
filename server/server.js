@@ -70,12 +70,13 @@ if (isDev && false) {
     }));
 
     app.use(webpackHotMiddleware(compiler));
-    app.use(express.static(path.resolve(__dirname, '../buildfile')));
+    app.use(express.static(path.resolve(__dirname, '../client/public')));
 } else {
-    app.use(express.static(path.resolve(__dirname, '../buildfile')));
+    app.use(express.static(path.resolve(__dirname, '../buildfile/main.js')));
 
     app.get('/', function (req, res) {
-        res.sendFile(path.resolve(__dirname , '../buildfile/index.html'));
+        console.log("server error");
+       res.sendFile(path.resolve(__dirname , '../client/public/index.html'));
         //res.send("Hello World!");
         res.end();
       });
