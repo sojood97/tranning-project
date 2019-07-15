@@ -83,7 +83,7 @@ var baseConfig = {
             }
 
             // SCSS files
-            /*
+           
         {
             test: /\.scss$/,
             loader: ExtractTextPlugin.extract({
@@ -108,7 +108,7 @@ var baseConfig = {
                 ]
             })
         }
-        */
+       
         ]
     },
     plugins: [

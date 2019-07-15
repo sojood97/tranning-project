@@ -80,10 +80,10 @@ var baseConfig = {
                         "sass-loader"
                     ]
                 })
-            }
+            },
 
             // SCSS files
-            /*
+           
         {
             test: /\.scss$/,
             loader: ExtractTextPlugin.extract({
@@ -108,7 +108,7 @@ var baseConfig = {
                 ]
             })
         }
-        */
+       
         ]
     },
     plugins: [

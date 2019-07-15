@@ -136,9 +136,15 @@ var baseConfig = {
             }
         ])
     ]
-    
+    exclude: [
+        /\.html$/,
+        /\.(js|jsx)$/,
+        /\.css$/,
+        /\.json$/,
+        /\.svg$/,
+        /\.scss$/, //Add this line
+    ],
 };
-
 
 // export configuration
 module.exports = baseConfig;

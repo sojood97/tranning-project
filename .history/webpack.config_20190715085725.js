@@ -139,6 +139,5 @@ var baseConfig = {
     
 };
 
-
 // export configuration
 module.exports = baseConfig;
