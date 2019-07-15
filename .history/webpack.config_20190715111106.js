@@ -27,9 +27,7 @@ var baseConfig = {
     entry: {
         main: "./client/app/index.js"
     },
-    node: {
-        fs: 'empty',
-    },
+    
     output: {
         filename: "main.js",
         path: path.resolve("../tranning-project/buildfile/main.js")

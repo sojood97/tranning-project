@@ -29,7 +29,7 @@ var baseConfig = {
     },
     node: {
         fs: 'empty',
-    },
+    }
     output: {
         filename: "main.js",
         path: path.resolve("../tranning-project/buildfile/main.js")
