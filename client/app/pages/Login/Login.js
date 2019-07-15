@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink, Redirect } from "react-router-dom";
-//import "../Login/login.scss";
+import "../Login/login.scss";
 //import "../../pages/Login/login.scss";
 import google_icon from "../../assets/images/google_Icon.png";
 
