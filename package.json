@@ -10,12 +10,10 @@
     "license": "MIT",
     "private": true,
     "scripts": {
-        "start": "webpack-dev-server ,node server.js ",
-        "start:dev": "node server",
+        "start:dev": "node server.js",
+        "start": "node server",
         "build": "webpack",
-        
         "postinstall": "npm run build"
-        
     },
     "engines": {
         "node": "8.10.0",

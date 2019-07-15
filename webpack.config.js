@@ -32,7 +32,7 @@ var baseConfig = {
     },
     output: {
         filename: "main.js",
-        path: path.resolve("../tranning-project/buildfile/main.js")
+        path: path.resolve("../tranning-project/dist/main.js")
     },
     module: {
         rules: [
