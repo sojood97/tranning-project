@@ -130,10 +130,7 @@ var baseConfig = {
             filename: "css/[name].[hash].css",
             disable: !isProd
         }),
-        new ExtractTextPlugin({
-            filename: "scss/[name].[hash].scss",
-            disable: !isProd
-        }),
+        
 
         new CopyWebpackPlugin([
             {

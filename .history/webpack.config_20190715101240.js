@@ -131,7 +131,7 @@ var baseConfig = {
             disable: !isProd
         }),
         new ExtractTextPlugin({
-            filename: "scss/[name].[hash].scss",
+            filename: "css/[name].[hash].css",
             disable: !isProd
         }),
 
