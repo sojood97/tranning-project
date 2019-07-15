@@ -13,8 +13,8 @@
         "start": "webpack-dev-server ,node server.js ",
         "start:dev": "node server",
         "build": "webpack",
+        "heroku-postbuild": "npm run build",
         
-        "postinstall": "npm run build"
         
     },
     "engines": {
