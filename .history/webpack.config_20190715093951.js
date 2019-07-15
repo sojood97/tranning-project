@@ -77,11 +77,32 @@ var baseConfig = {
                                 plugins: () => [autoprefixer]
                             }
                         },
-                        require.resolve('sass-loader')
+                        "sass-loader"
                     ]
                 })
             },
-            
+            {
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: [
+                        {
+                            loader: "css-loader",
+                            options: {
+                                sourceMap: true,
+                                importLoaders: 1
+                            }
+                        },
+                        {
+                            loader: "postcss-loader",
+                            options: {
+                                plugins: () => [autoprefixer]
+                            }
+                        },
+                        "sass-loader"
+                    ]
+                })
+            }
 
             // SCSS files
             /*

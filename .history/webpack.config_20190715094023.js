@@ -77,7 +77,7 @@ var baseConfig = {
                                 plugins: () => [autoprefixer]
                             }
                         },
-                        require.resolve('sass-loader')
+                        "sass-loader"
                     ]
                 })
             },

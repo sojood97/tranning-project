@@ -77,11 +77,10 @@ var baseConfig = {
                                 plugins: () => [autoprefixer]
                             }
                         },
-                        require.resolve('sass-loader')
+                        "scss-loader"
                     ]
                 })
-            },
-            
+            }
 
             // SCSS files
             /*

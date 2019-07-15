@@ -31,6 +31,8 @@ var baseConfig = {
     },
     module: {
         rules: [
+            
+            /*
             {
                 test: /\.(png|jpe?g|gif)$/,
                 use: [

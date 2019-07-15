@@ -31,6 +31,129 @@ var baseConfig = {
     },
     module: {
         rules: [
+            test: /\.js$/,
+            loader: 'babel-loader',
+            include: ['/Users/jian/Documents/sina/src', '/Users/jian/Documents/sina/test'],
+            options: {
+                presets: [['env', {
+                    modules: false,
+                    targets: {
+                        browsers: ['> 1%', 'last 2 versions', 'not ie <= 8']
+                    }
+                }], 'stage-2'],
+                plugins: ['transform-runtime']
+            }
+        },
+        {
+            test: /\.pug$/,
+            loader: 'pug-loader',
+            options: {
+                pretty: true
+            },
+            exclude: ['node_modules']
+        },
+        {
+            test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+            loader: 'url-loader',
+            options: {
+                limit: 10000,
+                name: 'static/img/[name].[hash:7].[ext]'
+            }
+        },
+        {
+            test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+            loader: 'url-loader',
+            options: {
+                limit: 10000,
+                name: 'static/media/[name].[hash:7].[ext]'
+            }
+        },
+        {
+            test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+            loader: 'url-loader',
+            options: {
+                limit: 10000,
+                name: 'static/fonts/[name].[hash:7].[ext]'
+            }
+        },
+        {
+            test: /\.css$/,
+            use: [{
+                loader: 'css-loader',
+                options: {
+                    sourceMap: true
+                }
+            },
+            {
+                loader: 'postcss-loader',
+                options: {
+                    sourceMap: true
+                }
+            }]
+        },
+        {
+            test: /\.less$/,
+            use: [{
+                loader: 'css-loader',
+                options: {
+                    sourceMap: true
+                }
+            },
+            {
+                loader: 'postcss-loader',
+                options: {
+                    sourceMap: true
+                }
+            },
+            {
+                loader: 'less-loader',
+                options: {
+                    sourceMap: true
+                }
+            }]
+        },
+        {
+            test: /\.sass$/,
+            use: [{
+                loader: 'css-loader',
+                options: {
+                    sourceMap: true
+                }
+            },
+            {
+                loader: 'postcss-loader',
+                options: {
+                    sourceMap: true
+                }
+            },
+            {
+                loader: 'sass-loader',
+                options: {
+                    indentedSyntax: true,
+                    sourceMap: true
+                }
+            }]
+        },
+        {
+            test: /\.scss$/,
+            use: [{
+                loader: 'css-loader',
+                options: {
+                    sourceMap: true
+                }
+            },
+            {
+                loader: 'postcss-loader',
+                options: {
+                    sourceMap: true
+                }
+            },
+            {
+                loader: 'sass-loader',
+                options: {
+                    sourceMap: true
+                }
+            /*
             {
                 test: /\.(png|jpe?g|gif)$/,
                 use: [

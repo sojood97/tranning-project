@@ -81,7 +81,49 @@ var baseConfig = {
                     ]
                 })
             },
-            
+            {
+                test: /\.sass$/,
+                use: [{
+                    loader: 'css-loader',
+                    options: {
+                        sourceMap: true
+                    }
+                },
+                {
+                    loader: 'postcss-loader',
+                    options: {
+                        sourceMap: true
+                    }
+                },
+                {
+                    loader: 'sass-loader',
+                    options: {
+                        indentedSyntax: true,
+                        sourceMap: true
+                    }
+                }]
+            },
+            {
+                test: /\.scss$/,
+                use: [{
+                    loader: 'css-loader',
+                    options: {
+                        sourceMap: true
+                    }
+                },
+                {
+                    loader: 'postcss-loader',
+                    options: {
+                        sourceMap: true
+                    }
+                },
+                {
+                    loader: 'sass-loader',
+                    options: {
+                        sourceMap: true
+                    }
+                }]
+            }
 
             // SCSS files
             /*
