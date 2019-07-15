@@ -86,8 +86,6 @@
     "peerDependencies": {
         "history": "1.x",
         "node-sass": "^4.12.0"
-    },
-    "browser":{
-        "child_process": false
-        }  
+    }
+    
 }
