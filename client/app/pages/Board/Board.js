@@ -87,6 +87,7 @@ export default class Board extends Component {
     }
     addNewCard1() {
         this.setState({ flag1: false, flag_card1: true });
+
     }
 
     addAnotherCard2(e) {
@@ -112,7 +113,7 @@ export default class Board extends Component {
         this.setState({list_flag:false});
     }
     addNewlist1(){
-        this.setState({add_list:true,list_flag:false})
+        this.setState({list_flag:false,add_list:true})
     }
     render() {
         return (
@@ -211,6 +212,7 @@ export default class Board extends Component {
                                     <input
                                         value="Thing To Do"
                                         className="list_title"
+                                       
                                     />
                                     <div className="list_actions">
                                         <NavLink
@@ -361,6 +363,7 @@ export default class Board extends Component {
                                                 placeholder="Enter a title for this card..."
                                                 rows="4"
                                                 cols="30"
+                                                
                                             />
 
                                             <input
@@ -737,12 +740,15 @@ export default class Board extends Component {
                                                 }>
                             <FontAwesomeIcon icon={faPlus} size="1x" /> Add
                             another list
-                            {this.state.list_flag ? (
+                           
+                                
+                        </span>
+                        {this.state.list_flag ? (
                                     <span className="list_card_itself">
                                     <textarea
                                         placeholder="Enter a title for this card..."
-                                        rows="4"
-                                        cols="20"
+                                        rows="2"
+                                        cols="30"
                                     />
 
                                     <input
@@ -761,14 +767,13 @@ export default class Board extends Component {
                                     />
                                 </span>
                                 ) : null}
-                                {this.state.add_list ?
-                                (
-                                    <div className="list_wrap">
+                          {this.state.add_list ? (
+                                     <div className="list_wrap">
                                      <div className="list_itself">
                                          <div className="list_title_action">
                                              
                                              <input
-                                                 value="Done "
+                                                 value="Doing "
                                                  className="list_title"
                                              />
                                              <div className="list_actions">
@@ -776,13 +781,13 @@ export default class Board extends Component {
                                                      to="/"
                                                      className="points_link"
                                                      onClick={e => {
-                                                         this.showMenu2(e);
+                                                         this.showMenu1(e);
                                                      }}
                                                  >
                                                      ...
                                                  </NavLink>
          
-                                                 {this.state.showMenu2 ? (
+                                                 {this.state.showMenu1 ? (
                                                      <div
                                                          className="menu_actions"
                                                          ref={element => {
@@ -794,7 +799,7 @@ export default class Board extends Component {
                                                              <span
                                                                  className="close_list_action"
                                                                  onClick={e => {
-                                                                     this.closeMenu2(e);
+                                                                     this.closeMenu1(e);
                                                                  }}
                                                              >
                                                                  <FontAwesomeIcon
@@ -881,7 +886,7 @@ export default class Board extends Component {
                                                      </div>
                                                  ) : null}
                                              </div>
-                                             {this.state.flag2 ? (
+                                             {this.state.flag1 ? (
                                                  <span className="list_card_itself">
                                                      <textarea
                                                          placeholder="Enter a title for this card..."
@@ -894,7 +899,7 @@ export default class Board extends Component {
                                                          type="submit"
                                                          value="Add Card"
                                                          onClick={() =>
-                                                             this.addNewCard2()
+                                                             this.addNewCard1()
                                                          }
                                                      />
                                                      <FontAwesomeIcon
@@ -902,13 +907,13 @@ export default class Board extends Component {
                                                          size="1x"
                                                          className="delete_card"
                                                          onClick={() =>
-                                                             this.closeCard2()
+                                                             this.closeCard1()
                                                          }
                                                      />
                                                  </span>
                                              ) : null}
                                          </div>
-                                         {this.state.flag_card2 ? (
+                                         {this.state.flag_card1 ? (
                                              <NavLink
                                                  to="/"
                                                  className="list_card_itself"
@@ -920,17 +925,17 @@ export default class Board extends Component {
                                              to=""
                                              className="add_another_card"
                                              onClick={e => {
-                                                 this.addAnotherCard2(e);
+                                                 this.addAnotherCard1(e);
                                              }}
                                          >
                                              <FontAwesomeIcon icon={faPlus} size="1x" />{" "}
                                              Add another card
                                          </NavLink>
                                      </div>
-                                 </div> 
-                                ):null}
-                        </span>
-                        
+                                 </div>
+                                       
+                                    ) : null}
+                                  
                     </div>
                 </div>
             </div>

@@ -39,15 +39,18 @@
 }
 
 .trello_text_span {
-    padding-left: 400px;
+    position: fixed;
+    left: 50%;
     margin-top: 4px;
     margin-bottom: 4px;
 }
 
 .board_header_right {
-    padding-left: 600px;
+    display:inherit;
+    position:fixed;
     right: 7px;
     vertical-align: middle;
+
 }
 
 .member_circle {
