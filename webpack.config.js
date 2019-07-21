@@ -143,6 +143,7 @@ var baseConfig = {
             }
         ])
     ]
+
     
 };
 

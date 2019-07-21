@@ -5,8 +5,9 @@
 .board_body {
     background-color: rgb(75, 191, 107);
     display: flex;
-    height: 100%;
+    // height: 100%;
     flex-direction: column;
+    height: 650px;
 }
 
 .board_body_header {
@@ -44,7 +45,6 @@
 
 .board_header_right {
     display: inherit;
-    position: fixed;
     right: 7px;
     vertical-align: middle;
 }
@@ -78,7 +78,7 @@
     vertical-align: middle;
     margin: 4px;
     right: 1%;
-    position: fixed;
+    padding-left: 470px;
     text-decoration: none;
 }
 
@@ -153,6 +153,7 @@
     border: none;
     background: none;
     width: 212px;
+    font-weight: 800;
 }
 
 .list_title:hover {
@@ -188,7 +189,7 @@
 }
 
 .list_card_itself {
-    background-color: #fff;
+    background-color: rgba(252, 255, 252, 0.25);
     border-radius: 3px;
     box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
     cursor: pointer;
@@ -228,7 +229,7 @@
     border-radius: 3px;
     width: 272px;
     margin: 0 4px;
-    height: 100%;
+
     box-sizing: border-box;
     display: inline-block;
 }
@@ -254,7 +255,7 @@
 }
 
 .title_menu {
-    padding: 8px;
+    //padding: 8px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -322,11 +323,31 @@
         border-radius: 100%;
         position: relative;
         background-color: rgb(223, 225, 230);
-        width: 50px;
-        height: 50px;
+        width: 28px;
+        height: 28px;
         box-shadow: none;
         color: black;
         font-weight: 700;
         line-height: 50px;
+        width:28px;
+        height: 28px;
     }
+}
+
+.card-position {
+    padding-left: 50px;
+}
+
+.color_button {
+    background-color: green;
+    border-radius: 3px;
+    width: 100px;
+    height: 40px;
+    padding-left: 10px;
+    color: white;
+}
+
+.delete_card {
+    padding-left: 20px;
+    color: rgb(110, 107, 107);
 }

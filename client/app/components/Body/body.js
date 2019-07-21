@@ -34,12 +34,12 @@ export class Body extends Component {
 
     render() {
         return (
-            <div>
+            
                 <nav>
                     <div>
                         <ul className="body1">
                             <ul className="b">
-                                <NavLink to="/Boards1" className="Boards">
+                                <NavLink to="/boards1" className="Boards">
                                     <FontAwesomeIcon
                                         icon={faTrello}
                                         className="icon1"
@@ -51,7 +51,7 @@ export class Body extends Component {
                             </ul>
                             <ul />
                             <ul className="b">
-                                <NavLink to="/Home1" className="Boards">
+                                <NavLink to="/home1" className="Boards">
                                     <FontAwesomeIcon
                                         icon={faHome}
                                         className="icon1"
@@ -146,7 +146,7 @@ export class Body extends Component {
                         ) : null}
                     </div>
                 </nav>
-            </div>
+           
         );
     }
 }

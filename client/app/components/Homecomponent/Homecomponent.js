@@ -44,11 +44,11 @@ export class Homecomponent extends Component {
                 <div className="padd">
                     <div className="cardd">
                         <ul className="cat">
-                            <div className="cat-image1">
+                            
                                 <img src={cat1} className="cat-image" />
-                            </div>
+                       
 
-                            <div>
+                            
                                 <h1 className="h1">
                                     Stay on track and up to date
                                 </h1>
@@ -57,7 +57,7 @@ export class Homecomponent extends Component {
                                     comments, add due dates, and we'll show the
                                     most important activity here.
                                 </p>
-                            </div>
+                           
                         </ul>
                     </div>
                 </div>
@@ -86,7 +86,7 @@ export class Homecomponent extends Component {
                         <p onClick={() => this.showMenu()}>create a board</p>
                     </div>
                 </div>
-                <div>
+                
                     {this.state.showMenu ? (
                         <div
                             className="menu_member1"
@@ -123,7 +123,7 @@ export class Homecomponent extends Component {
                         </div>
                     ) : null}
                 </div>
-            </div>
+            
         );
     }
 }

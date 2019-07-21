@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavLink, Redirect } from "react-router-dom";
-//import "../Login/login.scss";
-//import "../../pages/Login/login.scss";
+import "../Login/login.scss";
+
 import google_icon from "../../assets/images/google_Icon.png";
 
 export default class Login extends Component {
@@ -28,7 +28,7 @@ export default class Login extends Component {
         console.log("submit function");
         let data = { email: this.state.email, password: this.state.password };
         return fetch("/api/users/login", {
-            method: "POST", // 'GET', 'PUT', 'DELETE', etc.
+            method: "POST", 
             body: JSON.stringify(data), // Coordinate the body type with 'Content-Type'
             headers: new Headers({
                 "Content-Type": "application/json"
@@ -40,8 +40,7 @@ export default class Login extends Component {
                 return response.json();
             })
             .then(data => {
-                // `data` is the parsed version of the JSON returned from the above endpoint.
-                //console.log(data);  // { "userId": 1, "id": 1, "title": "...", "body": "..." }
+                
                 if (data.status == "success") {
                     localStorage.setItem("token", data.token);
                     this.setState({ msg: [], redirect: true });

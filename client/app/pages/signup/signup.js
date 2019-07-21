@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../../pages/signup/signup.scss";
 import { NavLink } from "react-router-dom";
-import {  Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 export class Signup extends Component {
     constructor(props) {
         super(props);
@@ -53,8 +53,8 @@ export class Signup extends Component {
                     }}
                 >
                     <div>
-                    {this.state.flag ? <Redirect to="/home" /> : null}
-                </div>
+                        {this.state.flag ? <Redirect to="/home" /> : null}
+                    </div>
                     <div>
                         {this.state.flag ? (
                             <div className="email_not_found">
