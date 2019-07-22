@@ -21,8 +21,10 @@ export default class Board extends Component {
             flag_card1: false,
             flag2: false,
             flag_card2: false,
-            list_flag:false,
-            add_list:false
+            list_flag: false,
+            add_list: false,
+            text: "",
+            list_name: ""
         };
         this.showMenu = this.showMenu.bind(this);
         this.showMenu1 = this.showMenu1.bind(this);
@@ -87,7 +89,6 @@ export default class Board extends Component {
     }
     addNewCard1() {
         this.setState({ flag1: false, flag_card1: true });
-
     }
 
     addAnotherCard2(e) {
@@ -106,14 +107,14 @@ export default class Board extends Component {
     closeCard2() {
         this.setState({ flag2: false });
     }
-    addNewList(){
-        this.setState({list_flag:true})
+    addNewList() {
+        this.setState({ list_flag: true });
     }
-    closelist(){
-        this.setState({list_flag:false});
+    closelist() {
+        this.setState({ list_flag: false });
     }
-    addNewlist1(){
-        this.setState({list_flag:false,add_list:true})
+    addNewlist1() {
+        this.setState({ list_flag: false, add_list: true });
     }
     render() {
         return (
@@ -208,11 +209,9 @@ export default class Board extends Component {
                         <div className="list_wrap">
                             <div className="list_itself">
                                 <div className="list_title_action">
-                                   
                                     <input
                                         value="Thing To Do"
                                         className="list_title"
-                                       
                                     />
                                     <div className="list_actions">
                                         <NavLink
@@ -363,7 +362,11 @@ export default class Board extends Component {
                                                 placeholder="Enter a title for this card..."
                                                 rows="4"
                                                 cols="30"
-                                                
+                                                onChange={event =>
+                                                    this.setState({
+                                                        text: event.target.value
+                                                    })
+                                                }
                                             />
 
                                             <input
@@ -389,7 +392,7 @@ export default class Board extends Component {
                                         to="/"
                                         className="list_card_itself"
                                     >
-                                        new card
+                                        {this.state.text}
                                     </NavLink>
                                 ) : null}
                                 <NavLink
@@ -407,7 +410,6 @@ export default class Board extends Component {
                         <div className="list_wrap">
                             <div className="list_itself">
                                 <div className="list_title_action">
-                                    
                                     <input
                                         value="Doing "
                                         className="list_title"
@@ -573,7 +575,6 @@ export default class Board extends Component {
                         <div className="list_wrap">
                             <div className="list_itself">
                                 <div className="list_title_action">
-                                    
                                     <input
                                         value="Done "
                                         className="list_title"
@@ -735,207 +736,192 @@ export default class Board extends Component {
                                 </NavLink>
                             </div>
                         </div>
-                        <span className="add_another_list" onClick={() =>
-                                                    this.addNewList()
-                                                }>
-                            <FontAwesomeIcon icon={faPlus} size="1x" /> Add
-                            another list
+                        <span
+                            className="add_another_list"
+                            onClick={() => this.addNewList()}
+                        >
+                            <FontAwesomeIcon icon={faPlus} size="1x" /> 
+                            Add another list
+                            
+
+                            
+                            
                            
-                                
                         </span>
                         {this.state.list_flag ? (
-                                    <span className="list_card_itself">
-                                    <textarea
-                                        placeholder="Enter a title for this card..."
-                                        rows="2"
-                                        cols="30"
-                                    />
+                            <span className="list_card_itself">
+                                <textarea
+                                    placeholder="Enter a title for this card..."
+                                    rows="2"
+                                    cols="30"
+                                />
 
-                                    <input
-                                        className="color_button"
-                                        type="submit"
-                                        value="Add Card"
-                                        onClick={() =>
-                                            this.addNewlist1()
-                                        }
-                                    />
-                                    <FontAwesomeIcon
-                                        icon={faTimes}
-                                        size="1x"
-                                        className="delete_card"
-                                        onClick={() => this.closelist()}
-                                    />
-                                </span>
-                                ) : null}
-                          {this.state.add_list ? (
-                                     <div className="list_wrap">
-                                     <div className="list_itself">
-                                         <div className="list_title_action">
-                                             
-                                             <input
-                                                 value="Doing "
-                                                 className="list_title"
-                                             />
-                                             <div className="list_actions">
-                                                 <NavLink
-                                                     to="/"
-                                                     className="points_link"
-                                                     onClick={e => {
-                                                         this.showMenu1(e);
-                                                     }}
-                                                 >
-                                                     ...
-                                                 </NavLink>
-         
-                                                 {this.state.showMenu1 ? (
-                                                     <div
-                                                         className="menu_actions"
-                                                         ref={element => {
-                                                             this.dropdownMenu = element;
-                                                         }}
-                                                     >
-                                                         <div className="title_menu">
-                                                             <span>List Action</span>
-                                                             <span
-                                                                 className="close_list_action"
-                                                                 onClick={e => {
-                                                                     this.closeMenu1(e);
-                                                                 }}
-                                                             >
-                                                                 <FontAwesomeIcon
-                                                                     icon={faTimes}
-                                                                     size="1x"
-                                                                 />
-                                                             </span>
-                                                         </div>
-                                                         <hr className="_hr" />
-                                                         <div>
-                                                             <div className="actions_div">
-                                                                 <ul className="ull">
-                                                                     <li className="lii">
-                                                                         <NavLink
-                                                                             to=""
-                                                                             className="choice_itself"
-                                                                         >
-                                                                             Add card...
-                                                                         </NavLink>
-                                                                     </li>
-                                                                     <li className="lii">
-                                                                         <NavLink
-                                                                             to=""
-                                                                             className="choice_itself"
-                                                                         >
-                                                                             Copy List...
-                                                                         </NavLink>
-                                                                     </li>
-                                                                     <li className="lii">
-                                                                         <NavLink
-                                                                             to=""
-                                                                             className="choice_itself"
-                                                                         >
-                                                                             Move List...
-                                                                         </NavLink>
-                                                                     </li>
-                                                                     <li className="lii">
-                                                                         <NavLink
-                                                                             to=""
-                                                                             className="choice_itself"
-                                                                         >
-                                                                             Watch
-                                                                         </NavLink>
-                                                                     </li>
-                                                                 </ul>
-         
-                                                                 <hr className="_hr" />
-                                                                 <ul className="ull">
-                                                                     <li className="lii">
-                                                                         <NavLink
-                                                                             to=""
-                                                                             className="choice_itself"
-                                                                         >
-                                                                             Move All
-                                                                             Cards In
-                                                                             This List...
-                                                                         </NavLink>
-                                                                     </li>
-                                                                     <li className="lii">
-                                                                         <NavLink
-                                                                             to=""
-                                                                             className="choice_itself"
-                                                                         >
-                                                                             Archive All
-                                                                             Cards In
-                                                                             This List...
-                                                                         </NavLink>
-                                                                     </li>
-                                                                 </ul>
-                                                                 <hr className="_hr" />
-                                                                 <ul className="ull">
-                                                                     <li className="lii">
-                                                                         <NavLink
-                                                                             to=""
-                                                                             className="choice_itself"
-                                                                         >
-                                                                             Archive This
-                                                                             List
-                                                                         </NavLink>
-                                                                     </li>
-                                                                 </ul>
-                                                             </div>
-                                                         </div>
-                                                     </div>
-                                                 ) : null}
-                                             </div>
-                                             {this.state.flag1 ? (
-                                                 <span className="list_card_itself">
-                                                     <textarea
-                                                         placeholder="Enter a title for this card..."
-                                                         rows="4"
-                                                         cols="30"
-                                                     />
-         
-                                                     <input
-                                                         className="color_button"
-                                                         type="submit"
-                                                         value="Add Card"
-                                                         onClick={() =>
-                                                             this.addNewCard1()
-                                                         }
-                                                     />
-                                                     <FontAwesomeIcon
-                                                         icon={faTimes}
-                                                         size="1x"
-                                                         className="delete_card"
-                                                         onClick={() =>
-                                                             this.closeCard1()
-                                                         }
-                                                     />
-                                                 </span>
-                                             ) : null}
-                                         </div>
-                                         {this.state.flag_card1 ? (
-                                             <NavLink
-                                                 to="/"
-                                                 className="list_card_itself"
-                                             >
-                                                 new card
-                                             </NavLink>
-                                         ) : null}
-                                         <NavLink
-                                             to=""
-                                             className="add_another_card"
-                                             onClick={e => {
-                                                 this.addAnotherCard1(e);
-                                             }}
-                                         >
-                                             <FontAwesomeIcon icon={faPlus} size="1x" />{" "}
-                                             Add another card
-                                         </NavLink>
-                                     </div>
-                                 </div>
-                                       
+                                <input
+                                    className="color_button"
+                                    type="submit"
+                                    value="Add Card"
+                                    onClick={() => this.addNewlist1()}
+                                />
+                                <FontAwesomeIcon
+                                    icon={faTimes}
+                                    size="1x"
+                                    className="delete_card"
+                                    onClick={() => this.closelist()}
+                                />
+                            </span>
+                        ) : null}
+                        {this.state.add_list ? (
+                            <div className="list_wrap">
+                                <div className="list_itself">
+                                    <div className="list_title_action">
+                                        <input
+                                            value="sojood"
+                                            className="list_title"
+                                        />
+                                        <div className="list_actions">
+                                            <NavLink
+                                                to="/"
+                                                className="points_link"
+                                                onClick={e => {
+                                                    this.showMenu1(e);
+                                                }}
+                                            >
+                                                ...
+                                            </NavLink>
+
+                                            {this.state.showMenu1 ? (
+                                                <div
+                                                    className="menu_actions"
+                                                    ref={element => {
+                                                        this.dropdownMenu = element;
+                                                    }}
+                                                >
+                                                    <div className="title_menu">
+                                                        <span>List Action</span>
+                                                        <span
+                                                            className="close_list_action"
+                                                            onClick={e => {
+                                                                this.closeMenu1(
+                                                                    e
+                                                                );
+                                                            }}
+                                                        >
+                                                            <FontAwesomeIcon
+                                                                icon={faTimes}
+                                                                size="1x"
+                                                            />
+                                                        </span>
+                                                    </div>
+                                                    <hr className="_hr" />
+                                                    <div>
+                                                        <div className="actions_div">
+                                                            <ul className="ull">
+                                                                <li className="lii">
+                                                                    <NavLink
+                                                                        to=""
+                                                                        className="choice_itself"
+                                                                    >
+                                                                        Add
+                                                                        card...
+                                                                    </NavLink>
+                                                                </li>
+                                                                <li className="lii">
+                                                                    <NavLink
+                                                                        to=""
+                                                                        className="choice_itself"
+                                                                    >
+                                                                        Copy
+                                                                        List...
+                                                                    </NavLink>
+                                                                </li>
+                                                                <li className="lii">
+                                                                    <NavLink
+                                                                        to=""
+                                                                        className="choice_itself"
+                                                                    >
+                                                                        Move
+                                                                        List...
+                                                                    </NavLink>
+                                                                </li>
+                                                                <li className="lii">
+                                                                    <NavLink
+                                                                        to=""
+                                                                        className="choice_itself"
+                                                                    >
+                                                                        Watch
+                                                                    </NavLink>
+                                                                </li>
+                                                            </ul>
+
+                                                            <hr className="_hr" />
+                                                            <ul className="ull">
+                                                                <li className="lii">
+                                                                    <NavLink
+                                                                        to=""
+                                                                        className="choice_itself"
+                                                                    >
+                                                                        Move All
+                                                                        Cards In
+                                                                        This
+                                                                        List...
+                                                                    </NavLink>
+                                                                </li>
+                                                                <li className="lii">
+                                                                    <NavLink
+                                                                        to=""
+                                                                        className="choice_itself"
+                                                                    >
+                                                                        Archive
+                                                                        All
+                                                                        Cards In
+                                                                        This
+                                                                        List...
+                                                                    </NavLink>
+                                                                </li>
+                                                            </ul>
+                                                            <hr className="_hr" />
+                                                            <ul className="ull">
+                                                                <li className="lii">
+                                                                    <NavLink
+                                                                        to=""
+                                                                        className="choice_itself"
+                                                                    >
+                                                                        Archive
+                                                                        This
+                                                                        List
+                                                                    </NavLink>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ) : null}
+                                        </div>
+                                    </div>
+                                    {this.state.flag_card1 ? (
+                                        <NavLink
+                                            to="/"
+                                            className="list_card_itself"
+                                        >
+                                            new card
+                                        </NavLink>
                                     ) : null}
-                                  
+                                    <NavLink
+                                        to=""
+                                        className="add_another_card"
+                                        onClick={e => {
+                                            this.addAnotherCard1(e);
+                                        }}
+                                    >
+                                        <FontAwesomeIcon
+                                            icon={faPlus}
+                                            size="1x"
+                                        />{" "}
+                                        Add another card
+                                    </NavLink>
+                                </div>
+                            </div>
+                        ) : null}
                     </div>
                 </div>
             </div>
