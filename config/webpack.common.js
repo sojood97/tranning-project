@@ -21,7 +21,6 @@ module.exports = {
         publicPath: '/'
     },
 
-
     resolve: {
         extensions: ['.js', '.json', '.css', '.scss', '.html'],
         alias: {

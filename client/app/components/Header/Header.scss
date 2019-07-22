@@ -46,10 +46,11 @@
 }
 
 .board_header_right {
-    display: inherit;
-    position: fixed;
+    display:inherit;
+    position:fixed;
     right: 7px;
     vertical-align: middle;
+
 }
 
 .member_circle {
@@ -62,6 +63,8 @@
     box-shadow: none;
     color: black;
     padding: 4px;
+    width: 28px;
+    height: 28px;
 }
 
 .position-card {
@@ -72,4 +75,98 @@
 .position-card2 {
     padding-left: 850px;
     padding-top: 50px;
+}
+
+.postion-board {
+    margin-right: 400px;
+    padding-top: 50px;
+}
+
+.text_names_box {
+    background-color: #fafbfc;
+    //border: none;
+    box-shadow: inset 0 0 0 2px #dfe1e6;
+    color: #172b4d;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    display: block;
+    line-height: 20px;
+    margin-bottom: 20px;
+    padding: 8px 12px;
+    transition-property: background-color, border-color, box-shadow;
+    transition-duration: 85ms;
+    transition-timing-function: ease;
+
+    width: 280px;
+    border-color: #026aa7;
+}
+
+.plus_position {
+    padding-left: 130px;
+}
+
+.plus_position1 {
+    padding-left: 140px;
+}
+
+.plus_position2 {
+    padding-left: 125px;
+}
+.image-recentlly1 {
+    width: 25px;
+    height: 25px;
+    //  padding-top: 50px;
+}
+.color_nav {
+    color: #6b778c;
+}
+.color_nav1 {
+    color: #6b778c;
+    padding-bottom: 7px;
+}
+
+.color_nav2 {
+    color: #6b778c;
+    padding-bottom: 7px;
+}
+.color_nav3 {
+    color: #6b778c;
+    padding-bottom: 7px;
+}
+
+.menu_actions_board {
+    display: block;
+    position: absolute;
+    color: #172b4d;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    height: auto;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 8px 16px -4px rgba(9, 30, 66, 0.25),
+        0 0 0 1px rgba(9, 30, 66, 0.08);
+    overflow: hidden;
+    width: 304px;
+}
+
+.nammess_form {
+    width: 50px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.card_board_loaction {
+    //padding-right: 300px;
+    padding-left: -300px;
+    padding-top: 30px;
+}
+
+.star_position {
+    padding-left: 5px;
+}
+
+.header_position{
+    margin: 0px;
 }

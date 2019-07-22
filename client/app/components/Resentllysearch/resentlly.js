@@ -10,7 +10,7 @@ export const Resentlly = () => (
         <div className="resentlly-all">
             <img src={Recently} className="image-recentlly" />
             <label className="view">Recently Viewed</label>
-            <NavLink to="/Board">
+            <NavLink className="link_board" to="/board">
                 <ul className="board-test1">
                     <board className="test1">test</board>
                 </ul>
