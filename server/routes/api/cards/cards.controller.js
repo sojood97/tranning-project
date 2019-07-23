@@ -50,4 +50,13 @@ controller.delete = function (req, res) {
     });
 }
 
+controller.edit = function (req, res) {
+    Card.findByIdAndUpdate(req.params.id, req.body, function (err, updatedProduct) {
+        Card.findOne({ _id: req.params.id })
+            .then(function (res2) {
+                res.send(res2);
+            });
+    });
+}
+
 module.exports = controller;
