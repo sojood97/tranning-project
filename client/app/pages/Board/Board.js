@@ -5,6 +5,10 @@ import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
 import Header from "../../components/Header/Header";
 import "../Board/Board.scss";
+import Dragable from "../../pages/Dnd/Dragable";
+import Droppable from "../../pages/Dnd/Droppable";
+import styled from 'styled-components';
+//-const wrapper =styled.div
 
 export default class Board extends Component {
     constructor(props) {
@@ -24,7 +28,11 @@ export default class Board extends Component {
             list_flag: false,
             add_list: false,
             text: "",
-            list_name: ""
+            text1:"",
+            text2:"",
+            list_name: "",
+            text_list:""
+           
         };
         this.showMenu = this.showMenu.bind(this);
         this.showMenu1 = this.showMenu1.bind(this);
@@ -116,9 +124,20 @@ export default class Board extends Component {
     addNewlist1() {
         this.setState({ list_flag: false, add_list: true });
     }
+
+
+    
     render() {
+       
+
+
         return (
+
+
+
+            
             <div className="board_container">
+               
                 <Header />
 
                 <div className="board_body">
@@ -357,8 +376,10 @@ export default class Board extends Component {
                                         call friend
                                     </NavLink>
                                     {this.state.flag ? (
+                                        <span>
                                         <span className="list_card_itself">
-                                            <textarea
+                                            <textarea className="aria_class"
+
                                                 placeholder="Enter a title for this card..."
                                                 rows="4"
                                                 cols="30"
@@ -369,7 +390,9 @@ export default class Board extends Component {
                                                 }
                                             />
 
-                                            <input
+                                            
+                                        </span>
+                                        <input
                                                 className="color_button"
                                                 type="submit"
                                                 value="Add Card"
@@ -414,6 +437,8 @@ export default class Board extends Component {
                                         value="Doing "
                                         className="list_title"
                                     />
+                                   
+                                    
                                     <div className="list_actions">
                                         <NavLink
                                             to="/"
@@ -523,40 +548,59 @@ export default class Board extends Component {
                                                 </div>
                                             </div>
                                         ) : null}
+                                        
                                     </div>
+                                    
+                                    
+                                </div>
+                                <div className="list_cards">
+                                    <NavLink
+                                        to="/"
+                                        className="list_card_itself"
+                                    >
+                                        find workplace
+                                    </NavLink>
                                     {this.state.flag1 ? (
+                                        <span>
                                         <span className="list_card_itself">
-                                            <textarea
+                                            <textarea className="aria_class"
                                                 placeholder="Enter a title for this card..."
                                                 rows="4"
                                                 cols="30"
+                                                onChange={event =>
+                                                    this.setState({
+                                                        text1: event.target.value
+                                                    })
+                                                }
                                             />
 
-                                            <input
-                                                className="color_button"
-                                                type="submit"
-                                                value="Add Card"
-                                                onClick={() =>
-                                                    this.addNewCard1()
-                                                }
-                                            />
-                                            <FontAwesomeIcon
-                                                icon={faTimes}
-                                                size="1x"
-                                                className="delete_card"
-                                                onClick={() =>
-                                                    this.closeCard1()
-                                                }
-                                            />
+                                            
                                         </span>
+                                        <input
+                                        className="color_button"
+                                        type="submit"
+                                        value="Add Card"
+                                        onClick={() =>
+                                            this.addNewCard1()
+                                        }
+                                    />
+                                    <FontAwesomeIcon
+                                        icon={faTimes}
+                                        size="1x"
+                                        className="delete_card"
+                                        onClick={() =>
+                                            this.closeCard1()
+                                        }
+                                    />
+                                    </span>
                                     ) : null}
-                                </div>
+                                    </div>
                                 {this.state.flag_card1 ? (
                                     <NavLink
                                         to="/"
                                         className="list_card_itself"
                                     >
-                                        new card
+                                        {this.state.text1}
                                     </NavLink>
                                 ) : null}
                                 <NavLink
@@ -689,15 +733,33 @@ export default class Board extends Component {
                                             </div>
                                         ) : null}
                                     </div>
+                                    
+                                </div>
+                                <div className="list_cards">
+                                    <NavLink
+                                        to="/"
+                                        className="list_card_itself"
+                                    >
+                                        find coffeshop
+                                    </NavLink>
                                     {this.state.flag2 ? (
+                                        <span>
+
                                         <span className="list_card_itself">
-                                            <textarea
+                                            <textarea className="aria_class"
                                                 placeholder="Enter a title for this card..."
                                                 rows="4"
                                                 cols="30"
+                                                onChange={event =>
+                                                    this.setState({
+                                                        text2: event.target.value
+                                                    })
+                                                }
                                             />
 
-                                            <input
+                                            
+                                        </span>
+                                        <input
                                                 className="color_button"
                                                 type="submit"
                                                 value="Add Card"
@@ -713,15 +775,16 @@ export default class Board extends Component {
                                                     this.closeCard2()
                                                 }
                                             />
-                                        </span>
+                                            </span>
+                                            
                                     ) : null}
-                                </div>
+                                    </div>
                                 {this.state.flag_card2 ? (
                                     <NavLink
                                         to="/"
                                         className="list_card_itself"
                                     >
-                                        new card
+                                        {this.state.text2}
                                     </NavLink>
                                 ) : null}
                                 <NavLink
@@ -742,40 +805,47 @@ export default class Board extends Component {
                         >
                             <FontAwesomeIcon icon={faPlus} size="1x" /> 
                             Add another list
-                            
-
-                            
-                            
                            
                         </span>
                         {this.state.list_flag ? (
+                            <span >
                             <span className="list_card_itself">
-                                <textarea
-                                    placeholder="Enter a title for this card..."
-                                    rows="2"
-                                    cols="30"
+                                
+                                <input className="aria_class"
+                                    placeholder="Enter list title..."
+                    
+                                    onChange={event =>
+                                        this.setState({
+                                            text_list: event.target.value
+                                        })
+                                    }
                                 />
 
-                                <input
-                                    className="color_button"
-                                    type="submit"
-                                    value="Add Card"
-                                    onClick={() => this.addNewlist1()}
-                                />
-                                <FontAwesomeIcon
-                                    icon={faTimes}
-                                    size="1x"
-                                    className="delete_card"
-                                    onClick={() => this.closelist()}
-                                />
+                                
                             </span>
+                            
+                            
+                            <input
+                            className="color_button"
+                            type="submit"
+                            value="Add List"
+                            onClick={() => this.addNewlist1()}
+                        />
+                        <FontAwesomeIcon
+                            icon={faTimes}
+                            size="1x"
+                            className="delete_card"
+                            onClick={() => this.closelist()}
+                        />
+                       
+                        </span>
                         ) : null}
                         {this.state.add_list ? (
                             <div className="list_wrap">
                                 <div className="list_itself">
                                     <div className="list_title_action">
                                         <input
-                                            value="sojood"
+                                            value={this.state.text_list}
                                             className="list_title"
                                         />
                                         <div className="list_actions">
@@ -903,7 +973,7 @@ export default class Board extends Component {
                                             to="/"
                                             className="list_card_itself"
                                         >
-                                            new card
+                                             {this.state.text1}
                                         </NavLink>
                                     ) : null}
                                     <NavLink
@@ -923,6 +993,7 @@ export default class Board extends Component {
                             </div>
                         ) : null}
                     </div>
+                    
                 </div>
             </div>
         );

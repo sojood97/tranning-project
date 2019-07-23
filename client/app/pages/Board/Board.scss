@@ -5,10 +5,10 @@
 .board_body {
     background-color: rgb(75, 191, 107);
     display: flex;
-    // height: 100%;
+   
     flex-direction: column;
     height: 650px;
-    //width: 2000px;
+    
 }
 
 .board_body_header {
@@ -168,7 +168,7 @@
 }
 
 .list_actions {
-    position: sticky;
+    //position: sticky;
     left: 100%;
     margin: 4px;
 }
@@ -191,7 +191,7 @@
 }
 
 .list_card_itself {
-    background-color: rgba(252, 255, 252, 0.25);
+    background-color: white;
     border-radius: 3px;
     box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
     cursor: pointer;
@@ -204,6 +204,7 @@
     position: relative;
     text-decoration: none;
     color: black;
+    
 }
 
 .list_card_itself:hover {
@@ -234,6 +235,7 @@
 
     box-sizing: border-box;
     display: inline-block;
+    //position: absolute;
 }
 
 .add_another_list:hover {
@@ -254,6 +256,7 @@
         0 0 0 1px rgba(9, 30, 66, 0.08);
     overflow: hidden;
     width: 304px;
+    z-index: 9999;
 }
 
 .title_menu {
@@ -320,6 +323,7 @@
     width: 304px;
     left: 120.609px;
     top: 84px;
+    z-index: 99999;
 
     .member_circle {
         border-radius: 100%;
@@ -333,6 +337,7 @@
         line-height: 50px;
         width:28px;
         height: 28px;
+        align-items: center;
     }
 }
 
@@ -341,16 +346,28 @@
 }
 
 .color_button {
-    background-color: green;
+    background-color: #5aac44;
     border-radius: 3px;
-    width: 100px;
+    width: 90px;
     height: 40px;
     padding-left: 10px;
     color: white;
+    box-shadow: none;
+    border: none;
 }
 
 .delete_card {
     padding-left: 20px;
     color: rgb(110, 107, 107);
 }
+
+.aria_class{
+    border:none;
+    box-shadow: none;
+    border-radius: 3px;
+}
+
+
+
+
 

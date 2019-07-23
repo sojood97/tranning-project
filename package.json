@@ -52,6 +52,7 @@
         "passport-local": "^1.0.0",
         "postcss-loader": "^2.1.6",
         "react": "^16.8.6",
+        "react-beautiful-dnd": "^11.0.5",
         "react-bootstrap": "^1.0.0-beta.9",
         "react-dom": "^16.8.6",
         "react-flash-message": "^1.0.2",
@@ -63,6 +64,7 @@
         "react-router-dom": "^4.2.2",
         "scss-loader": "0.0.1",
         "sequelize": "^5.8.11",
+        "styled-components": "^4.3.2",
         "uglifyjs-webpack-plugin": "^2.1.3",
         "webpack-cli": "^2.0.13",
         "webpack-dev-middleware": "^3.0.1",
@@ -88,5 +90,8 @@
         "history": "1.x",
         "node-sass": "^4.12.0"
     },
-   " browser": { "fs": false, "child-process": false }
+    " browser": {
+        "fs": false,
+        "child-process": false
+    }
 }

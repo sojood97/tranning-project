@@ -14,6 +14,7 @@
     vertical-align: middle;
     margin: 4px;
     text-decoration: none;
+     position: relative;
 }
 
 .board_icon:hover {
@@ -149,6 +150,9 @@
         0 0 0 1px rgba(9, 30, 66, 0.08);
     overflow: hidden;
     width: 304px;
+    z-index: 999999;
+    left: 4px;
+    top: 50px;
 }
 
 .nammess_form {
@@ -157,16 +161,7 @@
     padding-top: 5px;
 }
 
-.card_board_loaction {
-    //padding-right: 300px;
-    padding-left: -300px;
-    padding-top: 30px;
-}
-
 .star_position {
     padding-left: 5px;
 }
 
-.header_position{
-    margin: 0px;
-}

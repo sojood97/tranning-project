@@ -64,7 +64,7 @@ export class Header extends Component {
 
     render() {
         return (
-            <div className="header_position">
+           
                 <header className="board_header">
                     <NavLink to="/home" className="board_icon">
                         <FontAwesomeIcon icon={faHome} />
@@ -105,7 +105,7 @@ export class Header extends Component {
                             SA
                         </span>
                     </div>
-                    <div>
+                   
                         {this.state.showMenu ? (
                             <div className="position-card">
                                 <div
@@ -131,7 +131,7 @@ export class Header extends Component {
                                         </span>
                                     </div>
                                     <hr className="_hr" />
-                                    <div>
+                                   
                                         <div className="actions_div">
                                             <ul className="ull">
                                                 <li className="lii">
@@ -201,13 +201,13 @@ export class Header extends Component {
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
+                                   
                                 </div>
                             </div>
                         ) : null}
-                    </div>
+                   
 
-                    <div>
+                   
                         {this.state.showMenu1 ? (
                             <div className="position-card2">
                                 <div
@@ -232,7 +232,7 @@ export class Header extends Component {
                                         </span>
                                     </div>
                                     <hr className="_hr" />
-                                    <div>
+                                   
                                         <div className="actions_div">
                                             <ul className="ull">
                                                 <li className="lii">
@@ -285,22 +285,22 @@ export class Header extends Component {
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
+                                   
                                 </div>
                             </div>
                         ) : null}
-                    </div>
-                    <div>
+                   
+                    
                         {this.state.showMenu2 ? (
-                            <div className="card_board_loaction">
+                            
                                 <div
                                     className="menu_actions_board"
                                     ref={element => {
                                         this.dropdownMenu = element;
                                     }}
                                 >
-                                    <div>
-                                        <span> </span>
+                                  
+                                        
                                         <span
                                             className="close_list_action"
                                             onClick={e => {
@@ -312,9 +312,9 @@ export class Header extends Component {
                                                 size="1x"
                                             />
                                         </span>
-                                    </div>
+                                   
 
-                                    <div>
+                                  
                                         <div className="actions_div">
                                             <form className="nammess_form">
                                                 <input
@@ -415,14 +415,14 @@ export class Header extends Component {
                                             </div>
                                             <hr className="_hr" />
                                         </div>
-                                    </div>
+                                  
                                 </div>
-                            </div>
+                            
                         ) : null}
-                    </div>
+                  
                     {this.state.logflag ? <Redirect to="/login" /> : null}
                 </header>
-            </div>
+            
         );
     }
 }
