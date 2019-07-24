@@ -25,22 +25,19 @@ export default class Login extends Component {
 
     onSubmit(e) {
         e.preventDefault();
-        console.log("submit function");
+
         let data = { email: this.state.email, password: this.state.password };
         return fetch("/api/users/login", {
-            method: "POST", 
-            body: JSON.stringify(data), // Coordinate the body type with 'Content-Type'
+            method: "POST",
+            body: JSON.stringify(data),
             headers: new Headers({
                 "Content-Type": "application/json"
             })
         })
             .then(response => {
-                // The response is a Response instance.
-                // You parse the data into a useable format using `.json()`
                 return response.json();
             })
             .then(data => {
-                
                 if (data.status == "success") {
                     localStorage.setItem("token", data.token);
                     this.setState({ msg: [], redirect: true });

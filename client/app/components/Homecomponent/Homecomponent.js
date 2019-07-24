@@ -27,7 +27,6 @@ export class Homecomponent extends Component {
         });
     }
     showMenu(event) {
-        //event.preventDefault();
         this.setState({ showMenu: true }, () => {
             document.addEventListener("click", this.closeMenu);
         });
@@ -44,20 +43,14 @@ export class Homecomponent extends Component {
                 <div className="padd">
                     <div className="cardd">
                         <ul className="cat">
-                            
-                                <img src={cat1} className="cat-image" />
-                       
+                            <img src={cat1} className="cat-image" />
 
-                            
-                                <h1 className="h1">
-                                    Stay on track and up to date
-                                </h1>
-                                <p>
-                                    Invite people to boards and cards, leave
-                                    comments, add due dates, and we'll show the
-                                    most important activity here.
-                                </p>
-                           
+                            <h1 className="h1">Stay on track and up to date</h1>
+                            <p>
+                                Invite people to boards and cards, leave
+                                comments, add due dates, and we'll show the most
+                                important activity here.
+                            </p>
                         </ul>
                     </div>
                 </div>
@@ -86,44 +79,43 @@ export class Homecomponent extends Component {
                         <p onClick={() => this.showMenu()}>create a board</p>
                     </div>
                 </div>
-                
-                    {this.state.showMenu ? (
-                        <div
-                            className="menu_member1"
-                            ref={element => {
-                                this.dropdownMenu = element;
-                            }}
-                        >
-                            <div className="title_menu">
-                                <input
-                                    className="creat-board-name"
-                                    type="text"
-                                    placeholder="Add board title"
-                                />
-                                <span
-                                    className="close_list_action"
-                                    onClick={e => {
-                                        this.closeMenu(e);
-                                    }}
-                                >
-                                    <FontAwesomeIcon icon={faTimes} size="1x" />
-                                </span>
-                            </div>
-                            <div>
-                                <div className="actions_div">
-                                    <ul className="ull">
-                                        <li className="lii">
-                                            <button className="button-create">
-                                                create
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </div>
+
+                {this.state.showMenu ? (
+                    <div
+                        className="menu_member1"
+                        ref={element => {
+                            this.dropdownMenu = element;
+                        }}
+                    >
+                        <div className="title_menu">
+                            <input
+                                className="creat-board-name"
+                                type="text"
+                                placeholder="Add board title"
+                            />
+                            <span
+                                className="close_list_action"
+                                onClick={e => {
+                                    this.closeMenu(e);
+                                }}
+                            >
+                                <FontAwesomeIcon icon={faTimes} size="1x" />
+                            </span>
+                        </div>
+                        <div>
+                            <div className="actions_div">
+                                <ul className="ull">
+                                    <li className="lii">
+                                        <button className="button-create">
+                                            create
+                                        </button>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    ) : null}
-                </div>
-            
+                    </div>
+                ) : null}
+            </div>
         );
     }
 }

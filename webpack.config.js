@@ -37,6 +37,8 @@ var baseConfig = {
     module: {
         rules: [
             {
+    
+                
                 test: /\.(png|jpe?g|gif)$/,
                 use: [
                     {
@@ -45,6 +47,7 @@ var baseConfig = {
                     }
                 ]
             },
+            
             // JS files
             {
                 test: /\.jsx?$/,
@@ -117,7 +120,11 @@ var baseConfig = {
         */
         ]
     },
+    
+        
+    
     plugins: [
+        
         new webpack.HotModuleReplacementPlugin(),
 
         new webpack.DefinePlugin({

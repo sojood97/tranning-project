@@ -3,10 +3,10 @@ import { Redirect } from "react-router-dom";
 
 const headers = () => {
     const h = new Headers();
-    h.append('Content-Type', 'application/json');
-    h.append('x-access-token', localStorage.getItem('token'))
+    h.append("Content-Type", "application/json");
+    h.append("x-access-token", localStorage.getItem("token"));
     return h;
-}
+};
 
 export default class App extends Component {
     constructor(props) {
@@ -19,23 +19,20 @@ export default class App extends Component {
     }
 
     componentDidMount() {
-        //localStorage.clear('token');
-        fetch('/api/users/me', {
-            method: 'GET', // 'GET', 'PUT', 'DELETE', etc.
+        fetch("/api/users/me", {
+            method: "GET",
             headers: headers()
         })
-            .then((response) => {
-                // The response is a Response instance.
-                // You parse the data into a useable format using `.json()`
+            .then(response => {
                 return response.json();
-            }).then((data) => {
-                // `data` is the parsed version of the JSON returned from the above endpoint.
-                console.log(data);  // { "userId": 1, "id": 1, "title": "...", "body": "..." }
-                //localStorage.setItem('token', data.token);
+            })
+            .then(data => {
                 if (data.auth) {
-                    this.setState({ isLogin: true, data: [{ name: data.name, email: data.email }] });
-                }
-                else {
+                    this.setState({
+                        isLogin: true,
+                        data: [{ name: data.name, email: data.email }]
+                    });
+                } else {
                     this.setState({ isLogin: false, data: [] });
                 }
             });
@@ -44,7 +41,11 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                {this.state.isLogin ? (<Redirect to="/home" data={this.state.data} />) : (<Redirect to="/signup" />)}
+                {this.state.isLogin ? (
+                    <Redirect to="/home" data={this.state.data} />
+                ) : (
+                    <Redirect to="/signup" />
+                )}
             </div>
         );
     }

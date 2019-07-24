@@ -5,10 +5,10 @@
 .board_body {
     background-color: rgb(75, 191, 107);
     display: flex;
-   
+
     flex-direction: column;
-    height: 650px;
-    
+    height: 800px;
+    width: 3000px;
 }
 
 .board_body_header {
@@ -48,6 +48,8 @@
     display: inherit;
     right: 7px;
     vertical-align: middle;
+    position: absolute;
+    padding-left: 600px;
 }
 
 .star_icon {
@@ -79,8 +81,7 @@
     vertical-align: middle;
     margin: 4px;
     right: 1%;
-   // padding-left: 470px;
-    position: fixed;
+
     text-decoration: none;
 }
 
@@ -168,7 +169,6 @@
 }
 
 .list_actions {
-    //position: sticky;
     left: 100%;
     margin: 4px;
 }
@@ -204,11 +204,26 @@
     position: relative;
     text-decoration: none;
     color: black;
-    
 }
 
 .list_card_itself:hover {
     background-color: rgba(116, 122, 79, 0.253);
+}
+
+.list_card_itself1 {
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+    cursor: pointer;
+    display: block;
+    margin: 4px;
+    margin-bottom: 8px;
+    padding: 6px;
+    max-width: 300px;
+    min-height: 20px;
+    position: relative;
+    text-decoration: none;
+    color: black;
 }
 
 .add_another_card {
@@ -235,7 +250,6 @@
 
     box-sizing: border-box;
     display: inline-block;
-    //position: absolute;
 }
 
 .add_another_list:hover {
@@ -260,7 +274,6 @@
 }
 
 .title_menu {
-    //padding: 8px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -318,7 +331,7 @@
     border-radius: 3px;
     box-shadow: 0 8px 16px -4px rgba(9, 30, 66, 0.25),
         0 0 0 1px rgba(9, 30, 66, 0.08);
-    //overflow: hidden;
+
     position: absolute;
     width: 304px;
     left: 120.609px;
@@ -335,7 +348,7 @@
         color: black;
         font-weight: 700;
         line-height: 50px;
-        width:28px;
+        width: 28px;
         height: 28px;
         align-items: center;
     }
@@ -361,13 +374,15 @@
     color: rgb(110, 107, 107);
 }
 
-.aria_class{
-    border:none;
+.aria_class {
+    border: none;
     box-shadow: none;
     border-radius: 3px;
 }
 
-
-
-
-
+.design {
+    background-color: #555;
+    width: 250px;
+    height: 400px;
+    margin: 32px;
+}

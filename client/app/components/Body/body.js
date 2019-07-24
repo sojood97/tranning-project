@@ -20,7 +20,6 @@ export class Body extends Component {
     }
 
     showMenu(event) {
-        //event.preventDefault();
         this.setState({ showMenu: true }, () => {
             document.addEventListener("click", this.closeMenu);
         });
@@ -34,119 +33,117 @@ export class Body extends Component {
 
     render() {
         return (
-            
-                <nav>
-                    <div>
-                        <ul className="body1">
-                            <ul className="b">
-                                <NavLink to="/boards1" className="Boards">
-                                    <FontAwesomeIcon
-                                        icon={faTrello}
-                                        className="icon1"
-                                    />
-                                    <label className="home" className="icon">
-                                        Boards
-                                    </label>
-                                </NavLink>
-                            </ul>
-                            <ul />
-                            <ul className="b">
-                                <NavLink to="/home1" className="Boards">
-                                    <FontAwesomeIcon
-                                        icon={faHome}
-                                        className="icon1"
-                                    />
-                                    <label className="home" className="icon">
-                                        Home
-                                    </label>
-                                </NavLink>
-                            </ul>
-                        </ul>
-                    </div>
-                    <div>
-                        <span className="teams">Teams</span>
-                        <div>
-                            <span className="create">
+            <nav>
+                <div>
+                    <ul className="body1">
+                        <ul className="b">
+                            <NavLink to="/boards1" className="Boards">
                                 <FontAwesomeIcon
-                                    icon={faPlus}
-                                    onClick={() => this.showMenu()}
+                                    icon={faTrello}
+                                    className="icon1"
                                 />
-                                <label
-                                    className="create-label"
-                                    onClick={() => this.showMenu()}
-                                >
-                                    create a team
+                                <label className="home" className="icon">
+                                    Boards
                                 </label>
-                            </span>
-                        </div>
-                    </div>
+                            </NavLink>
+                        </ul>
+                        <ul />
+                        <ul className="b">
+                            <NavLink to="/home1" className="Boards">
+                                <FontAwesomeIcon
+                                    icon={faHome}
+                                    className="icon1"
+                                />
+                                <label className="home" className="icon">
+                                    Home
+                                </label>
+                            </NavLink>
+                        </ul>
+                    </ul>
+                </div>
+                <div>
+                    <span className="teams">Teams</span>
                     <div>
-                        {this.state.showMenu ? (
-                            <div className="postion-card1">
-                                <div
-                                    className="menu_actions"
-                                    ref={element => {
-                                        this.dropdownMenu = element;
-                                    }}
-                                >
-                                    <div className="title_menu">
-                                        <span>Creat Team</span>
-                                        <span
-                                            className="close_list_action"
-                                            onClick={e => {
-                                                this.closeMenu(e);
-                                            }}
-                                        >
-                                            <FontAwesomeIcon
-                                                icon={faTimes}
-                                                size="1x"
+                        <span className="create">
+                            <FontAwesomeIcon
+                                icon={faPlus}
+                                onClick={() => this.showMenu()}
+                            />
+                            <label
+                                className="create-label"
+                                onClick={() => this.showMenu()}
+                            >
+                                create a team
+                            </label>
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    {this.state.showMenu ? (
+                        <div className="postion-card1">
+                            <div
+                                className="menu_actions"
+                                ref={element => {
+                                    this.dropdownMenu = element;
+                                }}
+                            >
+                                <div className="title_menu">
+                                    <span>Creat Team</span>
+                                    <span
+                                        className="close_list_action"
+                                        onClick={e => {
+                                            this.closeMenu(e);
+                                        }}
+                                    >
+                                        <FontAwesomeIcon
+                                            icon={faTimes}
+                                            size="1x"
+                                        />
+                                    </span>
+                                </div>
+                                <hr className="_hr" />
+                                <div>
+                                    <div className="actions_div">
+                                        <form className="nammess">
+                                            <label className="color_texts">
+                                                Name
+                                            </label>
+                                            <input
+                                                className="text_names"
+                                                type="text"
+                                                name="name"
                                             />
-                                        </span>
-                                    </div>
-                                    <hr className="_hr" />
-                                    <div>
-                                        <div className="actions_div">
-                                            <form className="nammess">
-                                                <label className="color_texts">
-                                                    Name
-                                                </label>
-                                                <input
-                                                    className="text_names"
-                                                    type="text"
-                                                    name="name"
+                                            <label className="color_texts">
+                                                Description{" "}
+                                            </label>
+                                            <span>
+                                                <textarea
+                                                    rows="4"
+                                                    cols="50"
+                                                    className="text_names1"
                                                 />
-                                                <label className="color_texts">
-                                                    Description{" "}
-                                                </label>
-                                                <span>
-                                                    <textarea
-                                                        rows="4"
-                                                        cols="50"
-                                                        className="text_names1"
-                                                    />
-                                                </span>
+                                            </span>
 
-                                                <span className="create-button">
-                                                    <button>Create</button>
-                                                </span>
-                                            </form>
-                                            <hr className="_hr" />
-                                            <div>
-                                                <p className="pragraph11">
-                                                    A team is a group of boards
-                                                    and people. Use it to
-                                                    organize your company, side
-                                                    hustle, family, or friends.
-                                                </p>
-                                            </div>
+                                            <span className="create-button">
+                                                <button>Create</button>
+                                            </span>
+                                        </form>
+                                        <hr className="_hr" />
+                                        <div>
+                                            <p className="pragraph11">
+                                                A team is a group of boards and
+                                                people. Use it to organize your
+                                                company, side hustle, family, or
+                                                friends.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        ) : null}
-                    </div>
-                </nav>
-           
+                        </div>
+                    ) : null}
+                </div>
+            </nav>
         );
     }
 }

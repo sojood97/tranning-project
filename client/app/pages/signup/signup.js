@@ -32,15 +32,10 @@ export class Signup extends Component {
             })
         })
             .then(function(response) {
-                // The response is a Response instance.
-                // You parse the data into a useable format using .json()
                 return response.json();
             })
             .then(data => {
                 this.setState({ dataForSignup: data, flag: true });
-
-                // data is the parsed version of the JSON returned from the above endpoint.
-                console.log(data);
             });
     }
 

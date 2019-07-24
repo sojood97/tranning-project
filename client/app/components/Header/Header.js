@@ -64,365 +64,318 @@ export class Header extends Component {
 
     render() {
         return (
-           
-                <header className="board_header">
-                    <NavLink to="/home" className="board_icon">
-                        <FontAwesomeIcon icon={faHome} />
+            <header className="board_header">
+                <NavLink to="/home" className="board_icon">
+                    <FontAwesomeIcon icon={faHome} />
+                </NavLink>
+                <span className="board_icon" onClick={() => this.showMenu2()}>
+                    <FontAwesomeIcon icon={faTrello} /> Boards
+                </span>
+                <NavLink to="/home" className="board_icon">
+                    <input type="text" className="search_input" />
+                    <FontAwesomeIcon icon={faSearch} />
+                </NavLink>
+                <span className="trello_text_span">
+                    <NavLink to="/home" className="trello_link_span">
+                        <FontAwesomeIcon icon={faTrello} />
+                        Trello
                     </NavLink>
+                </span>
+                <div className="board_header_right">
                     <span
                         className="board_icon"
-                        onClick={() => this.showMenu2()}
+                        onClick={() => this.showMenu1()}
                     >
-                        <FontAwesomeIcon icon={faTrello} /> Boards
+                        <FontAwesomeIcon icon={faPlus} />
                     </span>
-                    <NavLink to="/home" className="board_icon">
-                        <input type="text" className="search_input" />
-                        <FontAwesomeIcon icon={faSearch} />
-                    </NavLink>
-                    <span className="trello_text_span">
-                        <NavLink to="/home" className="trello_link_span">
-                            <FontAwesomeIcon icon={faTrello} />
-                            Trello
-                        </NavLink>
+                    <span className="board_icon">
+                        <FontAwesomeIcon icon={faInfoCircle} />
                     </span>
-                    <div className="board_header_right">
-                        <span
-                            className="board_icon"
-                            onClick={() => this.showMenu1()}
+                    <span className="board_icon">
+                        <FontAwesomeIcon icon={faBell} />
+                    </span>
+                    <span
+                        className="member_circle"
+                        onClick={() => this.showMenu()}
+                    >
+                        SA
+                    </span>
+                </div>
+
+                {this.state.showMenu ? (
+                    <div className="position-card">
+                        <div
+                            className="menu_actions"
+                            ref={element => {
+                                this.dropdownMenu = element;
+                            }}
                         >
-                            <FontAwesomeIcon icon={faPlus} />
-                        </span>
-                        <span className="board_icon">
-                            <FontAwesomeIcon icon={faInfoCircle} />
-                        </span>
-                        <span className="board_icon">
-                            <FontAwesomeIcon icon={faBell} />
-                        </span>
-                        <span
-                            className="member_circle"
-                            onClick={() => this.showMenu()}
-                        >
-                            SA
-                        </span>
+                            <div className="title_menu">
+                                <span>Sojood alsayyed (sojoodalsayyed)</span>
+                                <span
+                                    className="close_list_action"
+                                    onClick={e => {
+                                        this.closeMenu(e);
+                                    }}
+                                >
+                                    <FontAwesomeIcon icon={faTimes} size="1x" />
+                                </span>
+                            </div>
+                            <hr className="_hr" />
+
+                            <div className="actions_div">
+                                <ul className="ull">
+                                    <li className="lii">
+                                        <NavLink
+                                            to=""
+                                            className="choice_itself"
+                                        >
+                                            Profile
+                                        </NavLink>
+                                    </li>
+                                    <li className="lii">
+                                        <NavLink
+                                            to=""
+                                            className="choice_itself"
+                                        >
+                                            Cards
+                                        </NavLink>
+                                    </li>
+                                    <li className="lii">
+                                        <NavLink
+                                            to=""
+                                            className="choice_itself"
+                                        >
+                                            Setting
+                                        </NavLink>
+                                    </li>
+                                </ul>
+                                <hr className="_hr" />
+                                <ul className="ull">
+                                    <li className="lii">
+                                        <NavLink
+                                            to=""
+                                            className="choice_itself"
+                                        >
+                                            Help
+                                        </NavLink>
+                                    </li>
+                                    <li className="lii">
+                                        <NavLink
+                                            to=""
+                                            className="choice_itself"
+                                        >
+                                            Shortcuts
+                                        </NavLink>
+                                    </li>
+                                    <li className="lii">
+                                        <NavLink
+                                            to=""
+                                            className="choice_itself"
+                                        >
+                                            Change language..
+                                        </NavLink>
+                                    </li>
+                                </ul>
+                                <hr className="_hr" />
+                                <ul className="ull">
+                                    <li className="lii">
+                                        <NavLink
+                                            to="/login"
+                                            className="choice_itself"
+                                            onClick={() => this.logout()}
+                                        >
+                                            Logout
+                                        </NavLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                   
-                        {this.state.showMenu ? (
-                            <div className="position-card">
-                                <div
-                                    className="menu_actions"
-                                    ref={element => {
-                                        this.dropdownMenu = element;
-                                    }}
-                                >
-                                    <div className="title_menu">
-                                        <span>
-                                            Sojood alsayyed (sojoodalsayyed)
-                                        </span>
-                                        <span
-                                            className="close_list_action"
-                                            onClick={e => {
-                                                this.closeMenu(e);
-                                            }}
-                                        >
-                                            <FontAwesomeIcon
-                                                icon={faTimes}
-                                                size="1x"
-                                            />
-                                        </span>
-                                    </div>
-                                    <hr className="_hr" />
-                                   
-                                        <div className="actions_div">
-                                            <ul className="ull">
-                                                <li className="lii">
-                                                    <NavLink
-                                                        to=""
-                                                        className="choice_itself"
-                                                    >
-                                                        Profile
-                                                    </NavLink>
-                                                </li>
-                                                <li className="lii">
-                                                    <NavLink
-                                                        to=""
-                                                        className="choice_itself"
-                                                    >
-                                                        Cards
-                                                    </NavLink>
-                                                </li>
-                                                <li className="lii">
-                                                    <NavLink
-                                                        to=""
-                                                        className="choice_itself"
-                                                    >
-                                                        Setting
-                                                    </NavLink>
-                                                </li>
-                                            </ul>
-                                            <hr className="_hr" />
-                                            <ul className="ull">
-                                                <li className="lii">
-                                                    <NavLink
-                                                        to=""
-                                                        className="choice_itself"
-                                                    >
-                                                        Help
-                                                    </NavLink>
-                                                </li>
-                                                <li className="lii">
-                                                    <NavLink
-                                                        to=""
-                                                        className="choice_itself"
-                                                    >
-                                                        Shortcuts
-                                                    </NavLink>
-                                                </li>
-                                                <li className="lii">
-                                                    <NavLink
-                                                        to=""
-                                                        className="choice_itself"
-                                                    >
-                                                        Change language..
-                                                    </NavLink>
-                                                </li>
-                                            </ul>
-                                            <hr className="_hr" />
-                                            <ul className="ull">
-                                                <li className="lii">
-                                                    <NavLink
-                                                        to=""
-                                                        className="choice_itself"
-                                                        onClick={() =>
-                                                            this.logout()
-                                                        }
-                                                    >
-                                                        Logout
-                                                    </NavLink>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                   
-                                </div>
-                            </div>
-                        ) : null}
-                   
+                ) : null}
 
-                   
-                        {this.state.showMenu1 ? (
-                            <div className="position-card2">
-                                <div
-                                    className="menu_actions"
-                                    ref={element => {
-                                        this.dropdownMenu = element;
+                {this.state.showMenu1 ? (
+                    <div className="position-card2">
+                        <div
+                            className="menu_actions"
+                            ref={element => {
+                                this.dropdownMenu = element;
+                            }}
+                        >
+                            <div className="title_menu">
+                                <span>Create</span>
+                                <span
+                                    className="close_list_action"
+                                    onClick={e => {
+                                        this.closeMenu1(e);
                                     }}
                                 >
-                                    <div className="title_menu">
-                                        <span>Create</span>
-                                        <span
-                                            //to="/home"
-                                            className="close_list_action"
-                                            onClick={e => {
-                                                this.closeMenu1(e);
-                                            }}
-                                        >
-                                            <FontAwesomeIcon
-                                                icon={faTimes}
-                                                size="1x"
-                                            />
-                                        </span>
-                                    </div>
-                                    <hr className="_hr" />
-                                   
-                                        <div className="actions_div">
-                                            <ul className="ull">
-                                                <li className="lii">
-                                                    <NavLink
-                                                        to=""
-                                                        className="choice_itself"
-                                                    >
-                                                        Create Board ...
-                                                        <p>
-                                                            A Board is made up
-                                                            of cards orderd on
-                                                            lists. use it to
-                                                            manage projects,or
-                                                            organize anything.
-                                                        </p>
-                                                    </NavLink>
-                                                </li>
-                                                <li className="lii">
-                                                    <NavLink
-                                                        to=""
-                                                        className="choice_itself"
-                                                    >
-                                                        Create Team...
-                                                        <p>
-                                                            {" "}
-                                                            A Team is a groupe
-                                                            of boards and
-                                                            people. use it to
-                                                            organize your
-                                                            company ,side hustel
-                                                            ,family ,or friends
-                                                        </p>
-                                                    </NavLink>
-                                                </li>
-                                                <li className="lii">
-                                                    <NavLink
-                                                        to=""
-                                                        className="choice_itself"
-                                                    >
-                                                        Create Bussiness Team...
-                                                        <p>
-                                                            With Bussiness Class
-                                                            your team has more
-                                                            security,
-                                                            administartive
-                                                            controls ,and
-                                                            unlimited Power-Ups.
-                                                        </p>
-                                                    </NavLink>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                   
-                                </div>
+                                    <FontAwesomeIcon icon={faTimes} size="1x" />
+                                </span>
                             </div>
-                        ) : null}
-                   
-                    
-                        {this.state.showMenu2 ? (
-                            
-                                <div
-                                    className="menu_actions_board"
-                                    ref={element => {
-                                        this.dropdownMenu = element;
-                                    }}
-                                >
-                                  
-                                        
-                                        <span
-                                            className="close_list_action"
-                                            onClick={e => {
-                                                this.closeMenu2(e);
-                                            }}
-                                        >
-                                            <FontAwesomeIcon
-                                                icon={faTimes}
-                                                size="1x"
-                                            />
-                                        </span>
-                                   
+                            <hr className="_hr" />
 
-                                  
-                                        <div className="actions_div">
-                                            <form className="nammess_form">
-                                                <input
-                                                    className="text_names_box"
-                                                    type="text"
-                                                    placeholder="Find boards by name"
-                                                />
-                                            </form>
-                                            <div className="actions_div">
-                                                <ul className="ull">
-                                                    <li
-                                                        className="lii"
-                                                        className="color_nav1"
-                                                    >
-                                                        <FontAwesomeIcon
-                                                            icon={faStar}
-                                                            size="1x"
-                                                        />
-                                                        STARRED BOARDS
-                                                        <FontAwesomeIcon
-                                                            icon={faPlus}
-                                                            size="1x"
-                                                            className="plus_position"
-                                                        />
-                                                    </li>
-                                                    <li
-                                                        className="lii"
-                                                        className="color_nav2"
-                                                    >
-                                                        <FontAwesomeIcon
-                                                            icon={faTrello}
-                                                            size="1x"
-                                                        />
-                                                        RECENT BOARDS
-                                                        <FontAwesomeIcon
-                                                            icon={faPlus}
-                                                            size="1x"
-                                                            className="plus_position1"
-                                                        />
-                                                    </li>
-                                                    <li
-                                                        className="lii"
-                                                        className="color_nav3"
-                                                    >
-                                                        <FontAwesomeIcon
-                                                            icon={faTrello}
-                                                            size="1x"
-                                                        />
-                                                        PERSONAL BOARDS
-                                                        <FontAwesomeIcon
-                                                            icon={faPlus}
-                                                            size="1x"
-                                                            className="plus_position2"
-                                                        />
-                                                    </li>
-                                                    <li className="lii">
-                                                        <NavLink
-                                                            to=""
-                                                            className="choice_itself"
-                                                        >
-                                                            <NavLink
-                                                                className="color_nav"
-                                                                to="/home"
-                                                            >
-                                                                Create new board
-                                                            </NavLink>
-                                                        </NavLink>
-                                                    </li>
-                                                    <li className="lii">
-                                                        <NavLink
-                                                            to=""
-                                                            className="choice_itself"
-                                                        >
-                                                            <NavLink
-                                                                className="color_nav"
-                                                                to="/home"
-                                                            >
-                                                                Always keep this
-                                                                menu open
-                                                            </NavLink>
-                                                        </NavLink>
-                                                    </li>
-                                                    <li className="lii">
-                                                        <NavLink
-                                                            to=""
-                                                            className="choice_itself"
-                                                        >
-                                                            <NavLink
-                                                                className="color_nav"
-                                                                to="/home"
-                                                            >
-                                                                See closed
-                                                                boards
-                                                            </NavLink>
-                                                        </NavLink>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <hr className="_hr" />
-                                        </div>
-                                  
-                                </div>
-                            
-                        ) : null}
-                  
-                    {this.state.logflag ? <Redirect to="/login" /> : null}
-                </header>
-            
+                            <div className="actions_div">
+                                <ul className="ull">
+                                    <li className="lii">
+                                        <NavLink
+                                            to=""
+                                            className="choice_itself"
+                                        >
+                                            Create Board ...
+                                            <p>
+                                                A Board is made up of cards
+                                                orderd on lists. use it to
+                                                manage projects,or organize
+                                                anything.
+                                            </p>
+                                        </NavLink>
+                                    </li>
+                                    <li className="lii">
+                                        <NavLink
+                                            to=""
+                                            className="choice_itself"
+                                        >
+                                            Create Team...
+                                            <p>
+                                                {" "}
+                                                A Team is a groupe of boards and
+                                                people. use it to organize your
+                                                company ,side hustel ,family ,or
+                                                friends
+                                            </p>
+                                        </NavLink>
+                                    </li>
+                                    <li className="lii">
+                                        <NavLink
+                                            to=""
+                                            className="choice_itself"
+                                        >
+                                            Create Bussiness Team...
+                                            <p>
+                                                With Bussiness Class your team
+                                                has more security,
+                                                administartive controls ,and
+                                                unlimited Power-Ups.
+                                            </p>
+                                        </NavLink>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                ) : null}
+
+                {this.state.showMenu2 ? (
+                    <div
+                        className="menu_actions_board"
+                        ref={element => {
+                            this.dropdownMenu = element;
+                        }}
+                    >
+                        <span
+                            className="close_list_action"
+                            onClick={e => {
+                                this.closeMenu2(e);
+                            }}
+                        >
+                            <FontAwesomeIcon icon={faTimes} size="1x" />
+                        </span>
+
+                        <div className="actions_div">
+                            <form className="nammess_form">
+                                <input
+                                    className="text_names_box"
+                                    type="text"
+                                    placeholder="Find boards by name"
+                                />
+                            </form>
+                            <div className="actions_div">
+                                <ul className="ull">
+                                    <li className="lii" className="color_nav1">
+                                        <FontAwesomeIcon
+                                            icon={faStar}
+                                            size="1x"
+                                        />
+                                        STARRED BOARDS
+                                        <FontAwesomeIcon
+                                            icon={faPlus}
+                                            size="1x"
+                                            className="plus_position"
+                                        />
+                                    </li>
+                                    <li className="lii" className="color_nav2">
+                                        <FontAwesomeIcon
+                                            icon={faTrello}
+                                            size="1x"
+                                        />
+                                        RECENT BOARDS
+                                        <FontAwesomeIcon
+                                            icon={faPlus}
+                                            size="1x"
+                                            className="plus_position1"
+                                        />
+                                    </li>
+                                    <li className="lii" className="color_nav3">
+                                        <FontAwesomeIcon
+                                            icon={faTrello}
+                                            size="1x"
+                                        />
+                                        PERSONAL BOARDS
+                                        <FontAwesomeIcon
+                                            icon={faPlus}
+                                            size="1x"
+                                            className="plus_position2"
+                                        />
+                                    </li>
+                                    <li className="lii">
+                                        <NavLink
+                                            to=""
+                                            className="choice_itself"
+                                        >
+                                            <NavLink
+                                                className="color_nav"
+                                                to="/home"
+                                            >
+                                                Create new board
+                                            </NavLink>
+                                        </NavLink>
+                                    </li>
+                                    <li className="lii">
+                                        <NavLink
+                                            to=""
+                                            className="choice_itself"
+                                        >
+                                            <NavLink
+                                                className="color_nav"
+                                                to="/home"
+                                            >
+                                                Always keep this menu open
+                                            </NavLink>
+                                        </NavLink>
+                                    </li>
+                                    <li className="lii">
+                                        <NavLink
+                                            to=""
+                                            className="choice_itself"
+                                        >
+                                            <NavLink
+                                                className="color_nav"
+                                                to="/home"
+                                            >
+                                                See closed boards
+                                            </NavLink>
+                                        </NavLink>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr className="_hr" />
+                        </div>
+                    </div>
+                ) : null}
+
+                {this.state.logoutflag ? <Redirect to="/login" /> : null}
+            </header>
         );
     }
 }

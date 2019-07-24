@@ -1,8 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
 import "../../components/Resentllysearch/resentlly.scss";
-
 import person from "../../assets/images/person.jpg";
 import Recently from "../../assets/images/Recently.png";
 export const Resentlly = () => (
