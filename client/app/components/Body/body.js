@@ -82,7 +82,7 @@ export class Body extends Component {
                     {this.state.showMenu ? (
                         <div className="postion-card1">
                             <div
-                                className="menu_actions"
+                                className="menu_actions3"
                                 ref={element => {
                                     this.dropdownMenu = element;
                                 }}

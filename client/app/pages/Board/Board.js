@@ -5,6 +5,8 @@ import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
 import Header from "../../components/Header/Header";
 import "../Board/Board.scss";
+import { DragDropContext } from "react-beautiful-dnd";
+import { Droppable, Draggable } from "react-beautiful-dnd";
 export default class Board extends Component {
     constructor(props) {
         super(props);
@@ -30,7 +32,9 @@ export default class Board extends Component {
             text2: "",
             text3: "",
             list_name: "",
-            text_list: ""
+            text_list: "",
+            count: 0,
+            time: undefined
         };
         this.showMenu = this.showMenu.bind(this);
         this.showMenu1 = this.showMenu1.bind(this);
@@ -92,7 +96,37 @@ export default class Board extends Component {
 
     addAnotherCard(e) {
         e.preventDefault();
-        this.setState({ flag: true });
+        // this.setState({ flag: true });
+        const count = this.state.count + 1;
+        localStorage.setItem("count", count);
+        this.setState({
+            count: count,
+            flag: true
+        });
+        console.log("count timestamp", count);
+        var now = new Date();
+
+        console.log(
+            "date",
+            now.getMonth() +
+                1 +
+                "/" +
+                now.getDate() +
+                "/" +
+                now.getFullYear() +
+                " " +
+                now.getHours() +
+                ":" +
+                (now.getMinutes() < 10
+                    ? "0" + now.getMinutes()
+                    : now.getMinutes()) +
+                ":" +
+                (now.getSeconds() < 10
+                    ? "0" + now.getSeconds()
+                    : now.getSeconds())
+        );
+
+        console.log("timestamp", new Date(now).getTime() / 1000);
     }
     addNewCard() {
         this.setState({ flag: false, flag_card: true });
@@ -100,7 +134,37 @@ export default class Board extends Component {
 
     addAnotherCard1(e) {
         e.preventDefault();
-        this.setState({ flag1: true });
+
+        const count = this.state.count + 1;
+        localStorage.setItem("count", count);
+        this.setState({
+            count: count,
+            flag1: true
+        });
+        console.log("count timestamp", count);
+        var now = new Date();
+
+        console.log(
+            "date",
+            now.getMonth() +
+                1 +
+                "/" +
+                now.getDate() +
+                "/" +
+                now.getFullYear() +
+                " " +
+                now.getHours() +
+                ":" +
+                (now.getMinutes() < 10
+                    ? "0" + now.getMinutes()
+                    : now.getMinutes()) +
+                ":" +
+                (now.getSeconds() < 10
+                    ? "0" + now.getSeconds()
+                    : now.getSeconds())
+        );
+
+        console.log("timestamp", new Date(now).getTime() / 1000);
     }
     addNewCard1() {
         this.setState({ flag1: false, flag_card1: true });
@@ -108,7 +172,37 @@ export default class Board extends Component {
 
     addAnotherCard2(e) {
         e.preventDefault();
-        this.setState({ flag2: true });
+        // this.setState({ flag2: true });
+        const count = this.state.count + 1;
+        localStorage.setItem("count", count);
+        this.setState({
+            count: count,
+            flag2: true
+        });
+        console.log("count timestamp", count);
+        var now = new Date();
+
+        console.log(
+            "date",
+            now.getMonth() +
+                1 +
+                "/" +
+                now.getDate() +
+                "/" +
+                now.getFullYear() +
+                " " +
+                now.getHours() +
+                ":" +
+                (now.getMinutes() < 10
+                    ? "0" + now.getMinutes()
+                    : now.getMinutes()) +
+                ":" +
+                (now.getSeconds() < 10
+                    ? "0" + now.getSeconds()
+                    : now.getSeconds())
+        );
+
+        console.log("timestamp", new Date(now).getTime() / 1000);
     }
     addNewCard2() {
         this.setState({ flag2: false, flag_card2: true });

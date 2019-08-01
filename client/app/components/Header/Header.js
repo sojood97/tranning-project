@@ -68,9 +68,9 @@ export class Header extends Component {
                 <NavLink to="/home" className="board_icon">
                     <FontAwesomeIcon icon={faHome} />
                 </NavLink>
-                <span className="board_icon" onClick={() => this.showMenu2()}>
+                <button className="board_icon" onClick={() => this.showMenu2()}>
                     <FontAwesomeIcon icon={faTrello} /> Boards
-                </span>
+                </button>
                 <NavLink to="/home" className="board_icon">
                     <input type="text" className="search_input" />
                     <FontAwesomeIcon icon={faSearch} />
@@ -103,9 +103,9 @@ export class Header extends Component {
                 </div>
 
                 {this.state.showMenu ? (
-                    <div className="position-card">
+                   
                         <div
-                            className="menu_actions"
+                            className="menu_actions2"
                             ref={element => {
                                 this.dropdownMenu = element;
                             }}
@@ -128,15 +128,23 @@ export class Header extends Component {
                                     <li className="lii">
                                         <NavLink
                                             to=""
-                                            className="choice_itself"
+                                            className="choice_itself1"
                                         >
-                                            Profile
+                                            Profile and visiblitiy
                                         </NavLink>
                                     </li>
                                     <li className="lii">
                                         <NavLink
                                             to=""
-                                            className="choice_itself"
+                                            className="choice_itself1"
+                                        >
+                                            Activity
+                                        </NavLink>
+                                    </li>
+                                    <li className="lii">
+                                        <NavLink
+                                            to=""
+                                            className="choice_itself1"
                                         >
                                             Cards
                                         </NavLink>
@@ -144,9 +152,8 @@ export class Header extends Component {
                                     <li className="lii">
                                         <NavLink
                                             to=""
-                                            className="choice_itself"
-                                        >
-                                            Setting
+                                            className="choice_itself1"
+                                        >Setting
                                         </NavLink>
                                     </li>
                                 </ul>
@@ -155,7 +162,7 @@ export class Header extends Component {
                                     <li className="lii">
                                         <NavLink
                                             to=""
-                                            className="choice_itself"
+                                            className="choice_itself1"
                                         >
                                             Help
                                         </NavLink>
@@ -163,7 +170,7 @@ export class Header extends Component {
                                     <li className="lii">
                                         <NavLink
                                             to=""
-                                            className="choice_itself"
+                                            className="choice_itself1"
                                         >
                                             Shortcuts
                                         </NavLink>
@@ -171,7 +178,7 @@ export class Header extends Component {
                                     <li className="lii">
                                         <NavLink
                                             to=""
-                                            className="choice_itself"
+                                            className="choice_itself1"
                                         >
                                             Change language..
                                         </NavLink>
@@ -182,7 +189,7 @@ export class Header extends Component {
                                     <li className="lii">
                                         <NavLink
                                             to="/login"
-                                            className="choice_itself"
+                                            className="choice_itself1"
                                             onClick={() => this.logout()}
                                         >
                                             Logout
@@ -191,11 +198,11 @@ export class Header extends Component {
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                  
                 ) : null}
 
                 {this.state.showMenu1 ? (
-                    <div className="position-card2">
+                    
                         <div
                             className="menu_actions"
                             ref={element => {
@@ -220,7 +227,7 @@ export class Header extends Component {
                                     <li className="lii">
                                         <NavLink
                                             to=""
-                                            className="choice_itself"
+                                            className="choice_itself2"
                                         >
                                             Create Board ...
                                             <p>
@@ -234,7 +241,7 @@ export class Header extends Component {
                                     <li className="lii">
                                         <NavLink
                                             to=""
-                                            className="choice_itself"
+                                            className="choice_itself2"
                                         >
                                             Create Team...
                                             <p>
@@ -249,7 +256,7 @@ export class Header extends Component {
                                     <li className="lii">
                                         <NavLink
                                             to=""
-                                            className="choice_itself"
+                                            className="choice_itself2"
                                         >
                                             Create Bussiness Team...
                                             <p>
@@ -263,7 +270,7 @@ export class Header extends Component {
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                   
                 ) : null}
 
                 {this.state.showMenu2 ? (
@@ -295,7 +302,7 @@ export class Header extends Component {
                                     <li className="lii" className="color_nav1">
                                         <FontAwesomeIcon
                                             icon={faStar}
-                                            size="1x"
+                                            size="1x" className="icon_star_position"
                                         />
                                         STARRED BOARDS
                                         <FontAwesomeIcon
@@ -307,7 +314,7 @@ export class Header extends Component {
                                     <li className="lii" className="color_nav2">
                                         <FontAwesomeIcon
                                             icon={faTrello}
-                                            size="1x"
+                                            size="1x" className="icon_resent_position"
                                         />
                                         RECENT BOARDS
                                         <FontAwesomeIcon
@@ -319,7 +326,7 @@ export class Header extends Component {
                                     <li className="lii" className="color_nav3">
                                         <FontAwesomeIcon
                                             icon={faTrello}
-                                            size="1x"
+                                            size="1x" className="icon_personal_position"
                                         />
                                         PERSONAL BOARDS
                                         <FontAwesomeIcon
@@ -329,43 +336,34 @@ export class Header extends Component {
                                         />
                                     </li>
                                     <li className="lii">
-                                        <NavLink
-                                            to=""
-                                            className="choice_itself"
-                                        >
-                                            <NavLink
+                                        
+                                            <a
                                                 className="color_nav"
-                                                to="/home"
+                                                to="/home" className="choice_itself"
                                             >
                                                 Create new board
-                                            </NavLink>
-                                        </NavLink>
+                                            </a>
+                                      
                                     </li>
                                     <li className="lii">
-                                        <NavLink
-                                            to=""
-                                            className="choice_itself"
-                                        >
+                                        
                                             <NavLink
                                                 className="color_nav"
-                                                to="/home"
+                                                to="/home" className="choice_itself"
                                             >
                                                 Always keep this menu open
                                             </NavLink>
-                                        </NavLink>
+                                        
                                     </li>
                                     <li className="lii">
-                                        <NavLink
-                                            to=""
-                                            className="choice_itself"
-                                        >
+                                        
                                             <NavLink
                                                 className="color_nav"
-                                                to="/home"
+                                                to="/home" className="choice_itself"
                                             >
                                                 See closed boards
                                             </NavLink>
-                                        </NavLink>
+                                       
                                     </li>
                                 </ul>
                             </div>
