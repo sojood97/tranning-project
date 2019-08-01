@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import "../reset_password/Rest_Password.scss";
+import "./Rest_Password.scss";
 
 export default class Reset_Password extends Component {
     render() {
