@@ -23,6 +23,7 @@ passport.use(
             name: "name",
             email: "email",
             password: "password",
+            gender: "gender",
             passReqToCallback: true
         },
 

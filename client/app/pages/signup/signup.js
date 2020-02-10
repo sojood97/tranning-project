@@ -9,6 +9,7 @@ export class Signup extends Component {
             email: "",
             password: "",
             dataForSignup: "",
+            gender: "",
             flag: false
         };
 
@@ -21,7 +22,8 @@ export class Signup extends Component {
         let user = {
             name: this.state.name,
             email: this.state.email,
-            password: this.state.password
+            password: this.state.password,
+            gender: this.state.gender
         };
         return fetch("/api/users/signup", {
             method: "post",
@@ -30,7 +32,7 @@ export class Signup extends Component {
                 "content-Type": "application/json"
             })
         })
-            .then(function(response) {
+            .then(function (response) {
                 // The response is a Response instance.
                 // You parse the data into a useable format using .json()
                 return response.json();
@@ -46,11 +48,8 @@ export class Signup extends Component {
     render() {
         return (
             <div className="all">
-                <form
-                    onSubmit={e => {
-                        this.onSubmit(e);
-                    }}
-                >
+                <form onSubmit={e => { this.onSubmit(e); }}>
+
                     <div>
                         {this.state.flag ? (
                             <div className="email_not_found">
@@ -75,10 +74,26 @@ export class Signup extends Component {
                             onChange={event =>
                                 this.setState({ name: event.target.value })
                             }
-                            placeholder="e.g ,Calvin and Hobbes"
+                            placeholder="e.g ,Calvi and Hobbes"
                             type="text"
                             name="name"
-                        />
+                        ></input>
+                    </div>
+
+                    <div className="gender">
+                        <label className="title_gender">Gender</label>
+                        <div className="genger_selection_area">
+                            <label className="container">Male
+                                <input type="radio" name="radio" value="male" onChange={event =>
+                                    this.setState({ gender: event.target.value })} />
+                                <span className="checkmark"></span>
+                            </label>
+                            <label class="container">Female
+                                <input type="radio" name="radio" value="female" onChange={event =>
+                                    this.setState({ gender: event.target.value })} />
+                                <span className="checkmark"></span>
+                            </label>
+                        </div>
                     </div>
 
                     <div className="email">

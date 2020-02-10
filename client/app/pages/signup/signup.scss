@@ -72,6 +72,81 @@
     border-right-width: 0.05ch;
 }
 
+.gender{
+    padding-left: 9.375rem;
+    padding-top: 1.25rem;
+    font-size: 1.5625rem;
+    font-family: Calibri;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    color: rgba(21, 30, 13, 0.61);
+
+    .genger_selection_area{
+        display: flex;
+        flex-direction: row;
+        padding-top: 0.8rem;
+    }
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 1rem;
+
+    input { 
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked ~ .checkmark {
+            border-color: #2196F3;
+        }
+
+        &:checked ~ .checkmark:after {
+            display: block;
+        }
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color:inherit;
+        border-radius: 50%;
+        border: solid;
+        border-color:#ccc; 
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 9px;
+            left: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #2196F3;
+           
+        }
+          
+    }
+
+    &:hover input ~ .checkmark {
+        background-color: #ccc;
+    }
+}
+
 .email {
     padding-left: 9.375rem;
     padding-top: 1.25rem;
